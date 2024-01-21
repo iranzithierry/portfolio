@@ -1,6 +1,5 @@
 "use client";
 import { rgbDataURL } from "@/components/styled-image";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import dynamic from 'next/dynamic';
@@ -10,6 +9,8 @@ const DynamicImage = dynamic(() => import('next/image'), { ssr: false });
 
 
 export default function Projects() {
+
+    const [fallbackSrc, setFallbackSrc] = useState({ url: '', index: -1 });
     const projects = [
         {
             name: 'Kinyarwanda youth dialogue datasets',
@@ -84,8 +85,6 @@ export default function Projects() {
             <div className="my-20 mx-5 sm:mx-0">
                 <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => {
-                        const [fallbackSrc, setFallbackSrc] = useState({ url: '', index: -1 });
-
                         return (
                             <li key={index} className="group relative flex flex-col items-start">
                                 <Image
