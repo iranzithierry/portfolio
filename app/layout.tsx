@@ -43,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main className="flex flex-col flex-1">
               {children}
               <Analytics />
-              <div className="sticky bottom-0 mb-4 sm:mb-0 left-0 right-0 z-50 flex h-12 w-full flex-wrap justify-center 2xl:h-14 active animation">
+              <div className="sticky  bottom-7 sm:bottom-0 left-0 right-0 z-50 flex h-12 w-full flex-wrap justify-center 2xl:h-14 active animation">
                 <div className="relative mx-auto flex h-10 shrink flex-wrap items-center justify-center rounded-full border-1/2 border-slate-200 bg-primary px-5 py-1 text-sm  text-white shadow-xl 2xl:h-14">
                   <a href="https://www.buymeacoffee.com/iranzithierry" target="_blank" rel="noopener noreferrer" className="mx-auto flex max-w-fit items-center justify-center rounded-lg transition-all duration-75 hover:scale-105">
                     <img className='h-8' src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=iranzithierry&button_colour=0069ff&font_colour=ffffff&font_family=Inter&outline_colour=ffffff&coffee_colour=FFDD00" />
