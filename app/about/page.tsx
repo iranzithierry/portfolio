@@ -8,7 +8,7 @@ export default function About() {
                 I am Iranzi Dev. <br/>an individual with passion for programming, gaming, and artistic.
                 </h1>
                 <p className="mt-6 text-base text-zinc-600">
-                Here's a concise overview of my background and interests.
+                Here&apos;s a concise overview of my background and interests.
                 </p>
             </div>
         </main>
