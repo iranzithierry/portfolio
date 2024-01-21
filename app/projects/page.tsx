@@ -77,7 +77,7 @@ export default function Projects() {
                     Projects That Reflect My Efforts to Make a Difference in the World.
                 </h1>
                 <p className="mt-6 text-base text-zinc-600">
-                    Throughout the years, I've dedicated myself to various projects, and here are some that hold a special place in my heart. Many of them are open-source, so feel free to explore the code and contribute if you have ideas on how they can be enhanced.
+                    Throughout the years, I&apos;ve dedicated myself to various projects, and here are some that hold a special place in my heart. Many of them are open-source, so feel free to explore the code and contribute if you have ideas on how they can be enhanced.
                 </p>
             </div>
 
