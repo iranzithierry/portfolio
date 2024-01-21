@@ -86,7 +86,7 @@ export default function Projects() {
                 <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => {
                         return (
-                            <li key={index} className="group/box  transition-all ease-in-out duration-100 relative flex flex-col items-start">
+                            <li key={index} className="group/box group  transition-all ease-in-out duration-100 relative flex flex-col items-start">
                                 <Image
                                     width={100}
                                     height={100}
@@ -105,7 +105,7 @@ export default function Projects() {
                                         <span className="relative z-10">{project.name}</span>
                                     </a>
                                 </h2>
-                                <p className="relative group-hover/box:line-clamp-none group-hover/box:max-h-[40em] line-clamp-3  max-h-[3em] z-10 mt-2 text-sm text-zinc-600 transition-all ease-in-out duration-100">{project.description}</p>
+                                <p className="relative group-hover/box:line-clamp-none group-hover/box:max-h-[40em] line-clamp-3 max-h-[5em] z-10 mt-2 text-sm text-zinc-600 transition-all ease-in-out duration-100">{project.description}</p>
                                 <span className="bg-zinc-100 rounded flex gap-2 px-2 py-1 z-10 mt-2 text-sm text-zinc-600">
                                     {project.techStacks.map((name, techIndex) => (
                                         <DynamicImage

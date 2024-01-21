@@ -24,13 +24,6 @@ export const metadata = {
   }
 }
 
-export const viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' }
-  ]
-}
-
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -39,11 +32,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn('font-sans antialiased', GeistSans.variable, GeistMono.variable)}>
-        <div className='fixed h-screen w-full z-10 bg-gradient-to-br from-indigo-50 dark:from-transparent via-white dark:via-transparent to-cyan-100 dark:to-transparent' />
+        <div className='fixed h-screen w-full z-10 bg-gradient-to-br from-indigo-50  via-white  to-cyan-100' />
         <Toaster />
         <Providers attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {/* @ts-ignore */}
-          <div className='relative z-40 dark:bg-muted/50'>
+          <div className='relative z-40'>
           <Suspense fallback="...">
             <Header />
           </Suspense>
