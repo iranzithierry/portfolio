@@ -86,7 +86,7 @@ export default function Projects() {
                 <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => {
                         return (
-                            <li key={index} className="group relative flex flex-col items-start">
+                            <li key={index} className="group/box  transition-all ease-in-out duration-100 relative flex flex-col items-start">
                                 <Image
                                     width={100}
                                     height={100}
@@ -98,15 +98,14 @@ export default function Projects() {
                                     className="h-8 w-8 relative z-10 rounded-md"
                                 />
                                 <h2 className="mt-6 text-base font-semibold text-zinc-800">
-                                    <div
-                                        className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl">
+                                    <div className="group absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-gray-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl">
                                     </div>
                                     <a target="_blank" rel="noreferrer noopener" href={project.websiteUrl}>
                                         <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                                         <span className="relative z-10">{project.name}</span>
                                     </a>
                                 </h2>
-                                <p className="relative z-10 mt-2 text-sm text-zinc-600">{project.description}</p>
+                                <p className="relative group-hover/box:line-clamp-none group-hover/box:max-h-[40em] line-clamp-3  max-h-[3em] z-10 mt-2 text-sm text-zinc-600 transition-all ease-in-out duration-100">{project.description}</p>
                                 <span className="bg-zinc-100 rounded flex gap-2 px-2 py-1 z-10 mt-2 text-sm text-zinc-600">
                                     {project.techStacks.map((name, techIndex) => (
                                         <DynamicImage
