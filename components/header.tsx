@@ -22,20 +22,22 @@ export function Header() {
           <StyledImage src='/app/logo.png' size="sm" />
         </a>
       </div>
-      <ul className="hidden sm:flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
-        <Link href="/about" className={`relative block p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
+      <div className='hidden sm:flex z-50 sm:fixed sm:top-6 left-0 right-0  w-full justify-center'>
+        <ul className="rounded-full flex sticky top-0 bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
+          <Link href="/about" className={`relative block p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
             <p className="capitalize">about</p>
-            {pathname === '/about' &&(
-            <span className="absolute inset-x-1 -bottom-px h-[1px] rounded-xl bg-primary"></span>
-            )}
-        </Link>
-        <Link className={`relative block p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`} href={'/projects'}>
-            <p className="capitalize">projects</p>
-            {pathname === '/projects' &&(
-            <span className="absolute inset-x-2 -bottom-px h-[1px] rounded-xl bg-primary"></span>
+            {pathname === '/about' && (
+              <span className="absolute inset-x-1 -bottom-px h-[1px] rounded-xl bg-primary"></span>
             )}
           </Link>
-      </ul>
+          <Link className={`relative block p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`} href={'/projects'}>
+            <p className="capitalize">projects</p>
+            {pathname === '/projects' && (
+              <span className="absolute inset-x-2 -bottom-px h-[1px] rounded-xl bg-primary"></span>
+            )}
+          </Link>
+        </ul>
+      </div>
       <div>
         <nav className={`inset-0 w-full sm:w-fit sm:hidden ${isMenuVisible && 'bg-white fixed'}`}>
           <ul
