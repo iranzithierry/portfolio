@@ -4,6 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import { Suspense } from "react";
 
 import '@/app/globals.css'
+import { Analytics } from '@vercel/analytics/react';
 import { cn } from '@/lib/utils'
 import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </Suspense>
             <main className="flex flex-col flex-1">
               {children}
+              <Analytics />
             </main>
             <Footer />
           </div>
