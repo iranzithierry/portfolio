@@ -67,7 +67,7 @@ export function Header() {
               :
               <svg width="23" height="23" viewBox="0 0 23 23">
                 <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 3 16.5 L 17 2.5"></path>
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 2 9.423 L 20 9.423" opacity="0"></path>
+                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 2 9.423 L 20 9.423" opacity="1"></path>
                 <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 3 2.5 L 17 16.346"></path>
               </svg>
             }
