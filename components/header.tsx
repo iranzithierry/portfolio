@@ -39,7 +39,7 @@ export function Header() {
         </ul>
       </div>
       <div>
-        <nav className={`inset-0 w-full sm:w-fit sm:hidden ${isMenuVisible && 'bg-white fixed'}`}>
+        <nav className={`inset-0 w-full h-full sm:w-fit sm:hidden ${isMenuVisible && 'bg-white fixed'}`}>
           <ul
             ref={menuRef}
             className={`absolute ${isMenuVisible ? '' : 'hidden'} w-full px-10 py-16`}
