@@ -22,24 +22,24 @@ export function Header() {
           <StyledImage src='/app/logo.png' size="sm" />
         </a>
       </div>
-      <div className='hidden sm:flex z-50 sm:fixed sm:top-6 left-0 right-0  w-full justify-center'>
-        <ul className="rounded-full flex sticky top-0 bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
-          <Link href="/about" className={`relative block p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
-            <p className="capitalize">about</p>
+      <div className='flex z-50 fixed top-6 left-0 right-0  w-full justify-center'>
+        <ul className="rounded-full flex sticky top-0 bg-white z-50 px-2 sm:px-3 font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+          <Link href="/about" className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
+            <p className="capitalize text-xs sm:text-sm md:text-md">about</p>
             {pathname === '/about' && (
               <span className="absolute inset-x-1 -bottom-px h-[1px] rounded-xl bg-primary"></span>
             )}
           </Link>
-          <Link className={`relative block p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`} href={'/projects'}>
-            <p className="capitalize">projects</p>
+          <Link  href={'/projects'} className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`}>
+            <p className="capitalize text-xs sm:text-sm md:text-md">projects</p>
             {pathname === '/projects' && (
               <span className="absolute inset-x-2 -bottom-px h-[1px] rounded-xl bg-primary"></span>
             )}
           </Link>
         </ul>
       </div>
-      <div>
-        <nav className={`inset-0 w-full min-h-screen z-50 sm:w-fit sm:hidden ${isMenuVisible && 'bg-white fixed'}`}>
+      {/* <div>
+        <nav className={`inset-0 w-full min-h-screen z-50 sm:w-fit hidden ${isMenuVisible && 'bg-white fixed'}`}>
           <ul
             ref={menuRef}
             className={`absolute ${isMenuVisible ? '' : 'hidden'} w-full px-10 py-16`}
@@ -73,7 +73,7 @@ export function Header() {
             }
           </button>
         </nav>
-      </div>
+      </div> */}
     </nav>
   )
 }
