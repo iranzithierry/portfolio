@@ -22,8 +22,8 @@ export function Header() {
           <StyledImage src='/app/logo.png' size="sm" />
         </a>
       </div>
-      <div className='flex fixed top-0 left-0 right-0 z-500 w-full justify-center'>
-        <ul className="rounded-full flex sticky top-0 mt-8 bg-white z-50 px-2 sm:px-3 font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+      <div className='flex fixed top-0 left-0 right-0 pt-6 z-50 w-full justify-center'>
+        <ul className="rounded-full flex sticky top-0  bg-white z-50 px-2 sm:px-3 font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5">
           <Link href="/about" className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
             <p className="capitalize text-xs sm:text-sm md:text-md">about</p>
             {pathname === '/about' && (
