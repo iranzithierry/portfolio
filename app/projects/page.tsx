@@ -72,9 +72,9 @@ export default function Projects() {
     ];
 
     return (
-        <main className="max-w-2xl lg:max-w-5xl mt-16 sm:mt-32 mx-auto">
+        <main className="max-w-2xl mx-auto mt-16 lg:max-w-5xl sm:mt-32">
             <div className="max-w-2xl mx-5 sm:mx-0">
-                <h1 className="text-4xl tracking-tighter text-zinc-800 sm:text-5xl font-bold">
+                <h1 className="text-4xl font-bold tracking-tighter text-zinc-800 sm:text-5xl">
                     Projects That Reflect My Efforts to Make a Difference in the World.
                 </h1>
                 <p className="mt-6 text-base text-zinc-600">
@@ -82,11 +82,11 @@ export default function Projects() {
                 </p>
             </div>
 
-            <div className="my-20 mx-5 sm:mx-0">
+            <div className="mx-5 my-20 sm:mx-0">
                 <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => {
                         return (
-                            <li key={index} className="group/box group  transition-all ease-in-out duration-100 relative flex flex-col items-start">
+                            <li key={index} className="relative flex flex-col items-start transition-all duration-100 ease-in-out group/box group">
                                 <Image
                                     width={100}
                                     height={100}
@@ -95,22 +95,20 @@ export default function Projects() {
                                     decoding='async'
                                     src={project.imageUrl}
                                     alt={`${project.name} Logo`}
-                                    className="h-8 w-8 relative z-10 rounded-md"
+                                    className="relative z-10 w-8 h-8 rounded-md"
                                 />
                                 <h2 className="mt-6 text-base font-semibold text-zinc-800">
-                                    <div className="group absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-gray-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl">
+                                    <div className="absolute z-0 transition scale-95 bg-gray-100 opacity-0 group -inset-y-6 -inset-x-4 group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl">
                                     </div>
                                     <a target="_blank" rel="noreferrer noopener" href={project.websiteUrl}>
-                                        <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                                        <span className="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl"></span>
                                         <span className="relative z-10">{project.name}</span>
                                     </a>
                                 </h2>
                                 <p className="relative group-hover/box:line-clamp-none group-hover/box:max-h-[40em] line-clamp-3 max-h-[5em] z-10 mt-2 text-sm text-zinc-600 transition-all ease-in-out duration-100">{project.description}</p>
-                                <span className="bg-zinc-100 rounded flex gap-2 px-2 py-1 z-10 mt-2 text-sm text-zinc-600">
+                                <span className="z-10 flex gap-2 px-2 py-1 mt-2 text-sm rounded bg-zinc-100 text-zinc-600">
                                     {project.techStacks.map((name, techIndex) => (
                                         <DynamicImage
-                                            placeholder="blur"
-                                            blurDataURL={rgbDataURL(0, 105, 255)}
                                             decoding='async'
                                             onError={() => {
                                                 setFallbackSrc({ url: `https://www.svgrepo.com/show/503406/language-xml.svg`, index: techIndex });
@@ -120,16 +118,16 @@ export default function Projects() {
                                             width="16" height="16" alt={name.toUpperCase()} />
                                     ))}
                                 </span>
-                                <p className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                                <p className="relative z-10 flex items-center mt-6 text-sm font-medium transition text-zinc-400 group-hover:text-teal-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                                         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                                         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                                     </svg>
                                     <span className="ml-2">{project.domain}</span></p>
                                 {project.links && (
-                                    <p className="relative z-10 flex items-center text-xs font-medium text-zinc-400 transition group-hover:text-teal-500">
+                                    <p className="relative z-10 flex items-center text-xs font-medium transition text-zinc-400 group-hover:text-teal-500">
                                         <DynamicImage
-                                            className="h-4 w-4"
+                                            className="w-4 h-4"
                                             src='/icons/api.svg'
                                             width="16" height="16" alt='API Icon' />
                                         <span className="ml-2">{project.links[1]} {project.links[0]}</span></p>

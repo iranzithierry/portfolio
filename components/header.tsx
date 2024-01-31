@@ -8,30 +8,29 @@ export function Header() {
   const [isMenuVisible, setIsMenuVisible] = React.useState(false);
   const menuRef = React.useRef<HTMLUListElement>(null);
 
-  const toggleMenu = () => {
-    setIsMenuVisible((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setIsMenuVisible(false);
-  };
+  // const toggleMenu = () => {
+  //   setIsMenuVisible((prev) => !prev);
+  // };
+  // const closeMenu = () => {
+  //   setIsMenuVisible(false);
+  // };
   return (
-    <nav className="top-0 z-10 h-16 pt-6 w-full flex justify-between items-center mx-5 sm:mx-auto max-w-2xl lg:max-w-5xl">
+    <nav className="top-0 z-10 flex items-center justify-between w-full h-16 max-w-2xl pt-6 mx-5 sm:mx-auto lg:max-w-5xl">
       <div className="w-20">
         <a href="/">
           <StyledImage src='/app/logo.png' size="sm" />
         </a>
       </div>
-      <div className='flex fixed top-0 left-0 right-0 z-50 w-full justify-center'>
-        <ul className="rounded-full flex sticky top-0 mt-12  bg-white z-50 px-2 sm:px-3 font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+      <div className='fixed z-50 flex justify-center w-full'>
+        <ul className={`flex px-2 font-medium bg-white rounded-full shadow-lg sm:px-3 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 ${document.body.scrollHeight > 10 && 'bg-red-500'}`}>
           <Link href="/about" className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
-            <p className="capitalize text-xs sm:text-sm md:text-md">about</p>
+            <p className="text-xs capitalize sm:text-sm md:text-md">about</p>
             {pathname === '/about' && (
               <span className="absolute inset-x-1 -bottom-px h-[1px] rounded-xl bg-primary"></span>
             )}
           </Link>
-          <Link  href={'/projects'} className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`}>
-            <p className="capitalize text-xs sm:text-sm md:text-md">projects</p>
+          <Link href={'/projects'} className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`}>
+            <p className="text-xs capitalize sm:text-sm md:text-md">projects</p>
             {pathname === '/projects' && (
               <span className="absolute inset-x-2 -bottom-px h-[1px] rounded-xl bg-primary"></span>
             )}
@@ -56,7 +55,7 @@ export function Header() {
               </Link>
             </li>
           </ul>
-          <button className="pointer-events-auto absolute top-8 right-6" onClick={toggleMenu}>
+          <button className="absolute pointer-events-auto top-8 right-6" onClick={toggleMenu}>
             <span className="sr-only">Open Menu</span>
             {!isMenuVisible ?
               <svg width="23" height="23" viewBox="0 0 23 23">
