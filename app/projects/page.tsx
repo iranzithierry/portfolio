@@ -13,6 +13,15 @@ export default function Projects() {
     const [fallbackSrc, setFallbackSrc] = useState({ url: '', index: -1 });
     const projects = [
         {
+            name: 'FleshMulla',
+            imageUrl: '/projects/fleshmulla.png',
+            websiteUrl: 'https://www.fleshmulla.com',
+            domain: 'fleshmulla.com',
+            techStacks: ['laravel', 'react', 'php','tailwindcss'],
+            description:
+            'FleshMulla is an affiliate marketing platform tailored for the Ghanaian market that empowers users to generate income through affiliate partnerships. It has attracted over 45,000'
+        },
+        {
             name: 'Kinyarwanda youth dialogue datasets',
             imageUrl: '/projects/kaggle.png',
             websiteUrl: 'https://www.kaggle.com/datasets/iranzidev/kinyarwanda-conversation-datasets/',
@@ -38,7 +47,7 @@ export default function Projects() {
             imageUrl: '/projects/statemula.png',
             websiteUrl: 'https://statemula.com/',
             domain: 'statemula.com',
-            techStacks: ['laravel', 'php', 'kaggle', 'javascript', 'heroku', 'mysql'],
+            techStacks: ['laravel', 'php', 'javascript', 'heroku', 'mysql'],
             description:
                 'A platform s for Kenyan users to generate income through affiliate marketing and has attracted a user base of around 15,000 individuals..',
         },
@@ -110,9 +119,9 @@ export default function Projects() {
                                     {project.techStacks.map((name, techIndex) => (
                                         <DynamicImage
                                             decoding='async'
-                                            onError={() => {
-                                                setFallbackSrc({ url: `https://www.svgrepo.com/show/503406/language-xml.svg`, index: techIndex });
-                                            }}
+                                            // onError={() => {
+                                            //     setFallbackSrc({ url: `https://www.svgrepo.com/show/503406/language-xml.svg`, index: techIndex });
+                                            // }}
                                             key={techIndex}
                                             src={`${fallbackSrc.index === techIndex ? fallbackSrc.url : `https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/${name}-colored.svg`}`}
                                             width="16" height="16" alt={name.toUpperCase()} />

@@ -22,7 +22,7 @@ export function Header() {
         </a>
       </div>
       <div className='fixed z-50 flex justify-center w-full'>
-        <ul className={`flex px-2 font-medium bg-white rounded-full shadow-lg sm:px-3 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 ${document.body.scrollHeight > 10 && 'bg-red-500'}`}>
+        <ul className='flex px-2 font-medium bg-white rounded-full shadow-lg sm:px-3 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5'>
           <Link href="/about" className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
             <p className="text-xs capitalize sm:text-sm md:text-md">about</p>
             {pathname === '/about' && (
