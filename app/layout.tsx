@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import Header from "@/components/header";
 import type { Metadata, Viewport } from "next";
 import { displayFont, monoFont } from "@/lib/fonts";
+import { Analytics } from '@vercel/analytics/react';
 import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers"
 import Footer from "@/components/footer";
@@ -53,7 +54,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             </ThemeProvider>
           </GlobalProvider>
         </Suspense>
-        {/* <Analytics /> */}
+        <Analytics />
       </body>
     </html>
   );
