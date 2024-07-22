@@ -73,7 +73,7 @@ function Experience() {
             <CardHeader>
                 <CardTitle className='flex items-center'>
                     <BriefcaseIcon className="h-5 w-5 flex-none" />
-                    <span className="ml-3">Experience</span>
+                    <span className="ml-2">Experience</span>
                 </CardTitle>
             </CardHeader>
             <CardContent className="grid gap-8">
@@ -114,7 +114,7 @@ function SignUpNewsLetter() {
             <CardHeader>
                 <CardTitle className='flex items-center'>
                     <EnvelopeIcon className="h-5 w-5 flex-none" />
-                    <span className="ml-3">Stay up to date</span>
+                    <span className="ml-2">Stay up to date</span>
                 </CardTitle>
                 <CardDescription>
                     Get notified when I publish something new, and unsubscribe at any time.
