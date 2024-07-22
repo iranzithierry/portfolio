@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export async function GET(request: Request) {
-    return "hello world"
+    return new Response(JSON.stringify({ message: "Hello World" }), { status: 200 });
 }
