@@ -47,7 +47,7 @@ function About() {
     return (
         <div className="mt-8 max-w-xl">
             <p className="text-sm text-gray-600 dark:text-neutral-400">
-                As a passionate software engineer and DevOps professional with over four years of experience,
+                As a passionate software engineer and DevOps with over four years of experience.
                 I specialize in developing robust and scalable solutions.
             </p>
             <p className="mt-3 text-sm text-gray-600 dark:text-neutral-400">
