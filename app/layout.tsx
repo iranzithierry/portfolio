@@ -9,6 +9,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers"
 import Footer from "@/components/footer";
+import Container from "@/components/container";
 
 export const metadata: Metadata = {
   title: {
@@ -46,8 +47,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                   </div>) :
                   (<>
                     <Header />
-                    {children}
-                    <Footer/>
+                    <Container>
+                      {children}
+                      <Footer />
+                    </Container>
                   </>
                   )
               }
