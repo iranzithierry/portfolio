@@ -34,7 +34,7 @@ export default function Profile() {
                     <Education />
                      <Articles />
                 </main>
-                <aside className="lg:col-span-2 flex flex-col flex-reverse lg:block overflow-y-auto space-y-4">
+                <aside className="lg:col-span-2 flex flex-col flex-col-reverse lg:block overflow-y-auto space-y-4">
                     <SignUpNewsLetter />
                     <Experience />
                 </aside>
