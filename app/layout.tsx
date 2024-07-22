@@ -1,53 +1,58 @@
-import { Toaster } from 'react-hot-toast'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Suspense } from "react";
+import "@/styles/globals.css";
+import { Toaster } from 'sonner'
+import { cn } from "@/lib/utils";
+import { Suspense } from 'react';
+import type { Metadata, Viewport } from "next";
+import { displayFont, monoFont } from "@/lib/fonts";
+import { GlobalProvider } from "@/contexts/global-context";
+import { ThemeProvider } from "@/components/providers"
+import Container from "@/components/container";
+import Header from "@/components/header";
 
-import '@/app/globals.css'
-import { Analytics } from '@vercel/analytics/react';
-import { cn } from '@/lib/utils'
-import { Providers } from '@/components/providers'
-import { Header } from '@/components/header'
-import Footer from "@/components/footer";
-
-export const metadata = {
-  metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+export const metadata: Metadata = {
   title: {
-    default: process.env.APP_NAME,
-    template: `%s - ${process.env.APP_NAME}`
+    default: 'Iranzi Thierry',
+    template: `%s | Software Engineer`
   },
-  description: `${process.env.APP_DESCRIPTION}`,
+  description: "I'm Thierry, a software engineer based in Rwanda. I'm the founder and CEO of Movo+, where we help vendors to sell their products online.",
+  keywords: "iranzi thierry, thierry, iranzi, iranzithierry, thierry iranzi, thierryiranzi",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png'
-  }
+    icon: '/images/favicon.ico',
+
+  },
+}
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#000' }
+  ],
+  colorScheme: "light"
 }
 
-interface RootLayoutProps {
-  children: React.ReactNode
-}
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased', GeistSans.variable, GeistMono.variable)}>
-        <div className='fixed min-h-[110vh] w-full z-10 bg-gradient-to-br from-indigo-50  via-white  to-cyan-100' />
-        <Toaster />
-        <Providers attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {/* @ts-ignore */}
-          <div className='relative z-40'>
-            <Suspense fallback="...">
-              <Header />
-            </Suspense>
-            <main className="flex flex-col flex-1">
-              {children}
-              <Analytics />
-            </main>
-            <Footer />
-          </div>
-        </Providers>
+      <body className={cn("bg-background font-sans antialiased", displayFont.variable, monoFont.variable)}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <GlobalProvider>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+              <Toaster closeButton richColors position="top-right" duration={2000} />
+              {
+                process.env.MAINTENANCE == "true" ?
+                  (<div>
+                    The Site Is Under Maintainence
+                  </div>) :
+                  (<Container>
+                    <Header/>
+                    {children}
+                  </Container>)
+              }
+            </ThemeProvider>
+          </GlobalProvider>
+        </Suspense>
+        {/* <Analytics /> */}
       </body>
     </html>
-  )
+  );
 }

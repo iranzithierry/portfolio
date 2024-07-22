@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import About from "./about/page";
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation'
+import React from 'react'
 
-export default function Index() {
-    return redirect('/about')
-  }
+export default function Page() {
+  return <h2>Hello</h2>
+}

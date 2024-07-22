@@ -1,78 +1,46 @@
-"use client";
-import * as React from 'react'
-import StyledImage from './styled-image'
-import Link from 'next/link';
-import { usePathname } from 'next/navigation'
-export function Header() {
-  const pathname = usePathname()
-  const [isMenuVisible, setIsMenuVisible] = React.useState(false);
-  const menuRef = React.useRef<HTMLUListElement>(null);
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
-  // const toggleMenu = () => {
-  //   setIsMenuVisible((prev) => !prev);
-  // };
-  // const closeMenu = () => {
-  //   setIsMenuVisible(false);
-  // };
-  return (
-    <nav className="top-0 z-10 flex items-center justify-between w-full h-16 max-w-2xl pt-6 mx-5 sm:mx-auto lg:max-w-5xl">
-      <div className="w-20">
-        <a href="/">
-          <StyledImage src='/app/logo.png' size="sm" />
-        </a>
-      </div>
-      <div className='fixed z-50 flex justify-center w-full'>
-        <ul className='flex px-2 font-medium bg-white rounded-full shadow-lg sm:px-3 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5'>
-          <Link href="/about" className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`}>
-            <p className="text-xs capitalize sm:text-sm md:text-md">about</p>
-            {pathname === '/about' && (
-              <span className="absolute inset-x-1 -bottom-px h-[1px] rounded-xl bg-primary"></span>
-            )}
-          </Link>
-          <Link href={'/projects'} className={`relative block p-2 md:p-3 transition hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`}>
-            <p className="text-xs capitalize sm:text-sm md:text-md">projects</p>
-            {pathname === '/projects' && (
-              <span className="absolute inset-x-2 -bottom-px h-[1px] rounded-xl bg-primary"></span>
-            )}
-          </Link>
-        </ul>
-      </div>
-      {/* <div>
-        <nav className={`inset-0 w-full min-h-screen z-50 sm:w-fit hidden ${isMenuVisible && 'bg-white fixed'}`}>
-          <ul
-            ref={menuRef}
-            className={`absolute ${isMenuVisible ? '' : 'hidden'} w-full px-10 py-16`}
-            onClick={closeMenu}
-          >
-            <li className={`border-b border-gray-300 py-5 ${isMenuVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <Link className={`flex w-full font-semibold capitalize hover:text-primary-hover ${pathname === '/about' ? 'text-primary' : 'text-zinc-800'}`} href={'/about'}>
-                about
-              </Link>
-            </li>
-            <li className={`border-b border-gray-300 py-5 ${isMenuVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <Link className={`flex w-full font-semibold capitalize hover:text-primary-hover ${pathname === '/projects' ? 'text-primary' : 'text-zinc-800'}`} href={'/projects'}>
-                projects
-              </Link>
-            </li>
-          </ul>
-          <button className="absolute pointer-events-auto top-8 right-6" onClick={toggleMenu}>
-            <span className="sr-only">Open Menu</span>
-            {!isMenuVisible ?
-              <svg width="23" height="23" viewBox="0 0 23 23">
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 2 2.5 L 20 2.5"></path>
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 2 9.423 L 20 9.423" opacity="1"></path>
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 2 16.346 L 20 16.346"></path>
-              </svg>
-              :
-              <svg width="23" height="23" viewBox="0 0 23 23">
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 3 16.5 L 17 2.5"></path>
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 2 9.423 L 20 9.423" opacity="1"></path>
-                <path fill="transparent" strokeWidth="2" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" d="M 3 2.5 L 17 16.346"></path>
-              </svg>
-            }
-          </button>
-        </nav>
-      </div> */}
-    </nav>
-  )
+export default function Header() {
+    return (
+        <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
+            <nav className="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700">
+                <div className="px-4 md:px-0 flex justify-between items-center">
+                    {/*  Logo*/}
+                    <div>
+                        <Link className="flex-none rounded-md overflow-hidden inline-block" href="/" aria-label="Iranzi Thierry Avatar">
+                            <Image className="w-24 h-auto max-h-16 aspect-square object-cover" src={'/images/logo.png'} width={500} height={500} alt='Iranzi Thierry Avatar' />
+                        </Link>
+                    </div>
+                    {/*  End Logo*/}
+
+                    <div className="md:hidden">
+                        {/*  Toggle Button*/}
+                        <button type="button" className="hs-collapse-toggle flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-header-floating-collapse" aria-expanded="false" aria-controls="hs-navbar-header-floating" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-header-floating">
+                            <svg className="hs-collapse-open:hidden shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="3" x2="21" y1="6" y2="6" />
+                                <line x1="3" x2="21" y1="12" y2="12" />
+                                <line x1="3" x2="21" y1="18" y2="18" />
+                            </svg>
+                            <svg className="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </button>
+                        {/* End Toggle Button*/}
+                    </div>
+                </div>
+
+                <div id="hs-navbar-header-floating" className="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-header-floating-collapse">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
+                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">Home</a>
+                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Projects</a>
+                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Work</a>
+                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Articles</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    )
 }
