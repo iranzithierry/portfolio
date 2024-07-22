@@ -12,7 +12,7 @@ export default function Profile() {
         <>
             <div className='py-4'>
                 <div className="flex items-center gap-x-3">
-                    <div className="shrink-0">
+                    <div className="shrink-0 hidden lg:block">
                         <Image width={500} height={500} className="shrink-0 size-16 rounded-full" src="/images/logo.png" alt="Avatar" />
                     </div>
 
