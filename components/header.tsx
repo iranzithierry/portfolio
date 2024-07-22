@@ -55,7 +55,7 @@ export default function Header() {
                 <div className={`${mobileMenuOpened ? 'block' : 'hidden md:block'} overflow-hidden transition-all duration-300 basis-full grow`}>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
                         {menus.map((menu, idx) => (
-                            <Link key={idx} className={`py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 ${pathName == menu.link ? 'border-gray-800 text-gray-800 dark:border-neutral-200 dark:text-neutral-200 font-medium  ' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200'} focus:outline-none`} href={menu.link}>
+                            <Link key={idx} className={`py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 ${pathName == menu.link ? 'border-primary text-primary dark:border-neutral-200 dark:text-neutral-200 font-medium  ' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200'} focus:outline-none`} href={menu.link}>
                                 {menu.title}
                             </Link>
                         ))}
