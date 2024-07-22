@@ -25,7 +25,6 @@ export default function Page() {
         },
     ];
     return (
-        <Container>
             <ul role="list" className="grid grid-cols-1 gap-x-12 pt-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, index) => {
                     return (
@@ -65,6 +64,5 @@ export default function Page() {
                     )
                 })}
             </ul>
-        </Container>
     )
 }
