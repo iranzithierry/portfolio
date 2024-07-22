@@ -30,11 +30,11 @@ export default function Profile() {
             </div>
             <div className="grid lg:grid-cols-5 gap-12 items-stretch overflow-hidden">
                 <main className="flex-1 overflow-y-auto lg:col-span-3">
-                    <Articles />
                     <Testimonials />
                     <Education />
+                     <Articles />
                 </main>
-                <aside className="lg:col-span-2 overflow-y-auto space-y-4">
+                <aside className="lg:col-span-2 flex flex-col flex-reverse lg:block overflow-y-auto space-y-4">
                     <SignUpNewsLetter />
                     <Experience />
                 </aside>
