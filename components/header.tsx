@@ -1,43 +1,64 @@
+'use client';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { usePathname } from 'next/navigation'
+import React, { useState } from 'react'
 
+export const menus = [
+    {
+        title: 'Home',
+        link: '/'
+    },
+    {
+        title: 'About',
+        link: '/about'
+    },
+    {
+        title: 'Projects',
+        link: '/projects'
+    },
+    {
+        title: 'Articles',
+        link: '/articles'
+    },
+    {
+        title: 'Tools',
+        link: '/tools'
+    },
+]
 export default function Header() {
+    const [mobileMenuOpened, setMobileMenuOpened] = useState(false)
+    const pathName = usePathname()
     return (
-        <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-            <nav className="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700">
+        <header className="fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
+            <nav className={`mt-4 relative max-w-2xl ${pathName == '/' ? 'w-fit' : 'w-full'} bg-white border shadow-md border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-zinc-800 dark:border-neutral-700`}>
                 <div className="px-4 md:px-0 flex justify-between items-center">
                     {/*  Logo*/}
-                    <div>
-                        <Link className="flex-none rounded-md overflow-hidden inline-block" href="/" aria-label="Iranzi Thierry Avatar">
-                            <Image className="w-24 h-auto max-h-16 aspect-square object-cover" src={'/images/logo.png'} width={500} height={500} alt='Iranzi Thierry Avatar' />
-                        </Link>
-                    </div>
+                        <div className={`${pathName == '/' && 'hidden'}`}>
+                            <Link className="flex items-center overflow-hidden" href="/" aria-label="Iranzi Thierry Avatar">
+                                <Image className="object-cover h-8 w-8 sm:h-10 sm:w-10 md:h-[50px] md:w-[50px] rounded-full" src={'/images/logo.png'} width={100} height={100} alt='Iranzi Thierry Avatar' />
+                            </Link>
+                        </div>
                     {/*  End Logo*/}
 
                     <div className="md:hidden">
                         {/*  Toggle Button*/}
-                        <button type="button" className="hs-collapse-toggle flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-header-floating-collapse" aria-expanded="false" aria-controls="hs-navbar-header-floating" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-header-floating">
-                            <svg className="hs-collapse-open:hidden shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="3" x2="21" y1="6" y2="6" />
-                                <line x1="3" x2="21" y1="12" y2="12" />
-                                <line x1="3" x2="21" y1="18" y2="18" />
-                            </svg>
-                            <svg className="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 6 6 18" />
-                                <path d="m6 6 12 12" />
-                            </svg>
+                        <button type="button" className="flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-expanded="false" >
+                            <Bars3Icon onClick={() => setMobileMenuOpened(true)} className={`${mobileMenuOpened && 'hidden'} shrink-0 size-3.5`} width="24" height="24" />
+                            <XMarkIcon onClick={() => setMobileMenuOpened(false)} className={`${mobileMenuOpened ? 'block' : 'hidden'}  shrink-0 size-4`} width="24" height="24" />
                         </button>
                         {/* End Toggle Button*/}
                     </div>
                 </div>
 
-                <div id="hs-navbar-header-floating" className="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-header-floating-collapse">
+                <div className={`${mobileMenuOpened ? 'block' : 'hidden md:block'} overflow-hidden transition-all duration-300 basis-full grow`}>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">Home</a>
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Projects</a>
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Work</a>
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">Articles</a>
+                        {menus.map((menu, idx) => (
+                            <Link key={idx} className={`py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 ${pathName == menu.link ? 'border-gray-800 text-gray-800 dark:border-neutral-200 dark:text-neutral-200 font-medium  ' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200'} focus:outline-none`} href={menu.link}>
+                                {menu.title}
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </nav>

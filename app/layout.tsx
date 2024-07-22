@@ -2,12 +2,12 @@ import "@/styles/globals.css";
 import { Toaster } from 'sonner'
 import { cn } from "@/lib/utils";
 import { Suspense } from 'react';
+import Header from "@/components/header";
 import type { Metadata, Viewport } from "next";
 import { displayFont, monoFont } from "@/lib/fonts";
 import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers"
-import Container from "@/components/container";
-import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -43,10 +43,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                   (<div>
                     The Site Is Under Maintainence
                   </div>) :
-                  (<Container>
-                    <Header/>
+                  (<>
+                    <Header />
                     {children}
-                  </Container>)
+                    <Footer/>
+                  </>
+                  )
               }
             </ThemeProvider>
           </GlobalProvider>

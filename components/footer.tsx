@@ -1,18 +1,31 @@
+"use client";
 import Link from 'next/link'
 import React from 'react'
+import { menus } from './header'
+import { ThemeToggle } from './theme-toggle'
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-            <p className="text-xs text-gray-500">© 2024 Iranzi Thierry. All rights reserved.</p>
-            <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-                <Link className="text-xs hover:underline underline-offset-4" href="#">
-                    Terms of Service
-                </Link>
-                <Link className="text-xs hover:underline underline-offset-4" href="#">
-                    Privacy
-                </Link>
-            </nav>
+        <footer className="mx-auto max-w-7xl py-28 px-6 sm:px-8 lg:px-24 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
+                <div className="flex flex-wrap justify-between items-center gap-2">
+                    <div>
+                        <p className="text-xs text-gray-600 dark:text-neutral-400">
+                            © 2024 Iranzi Thierry. All rights reserved.
+                        </p>
+                    </div>
+                    <ul className="flex flex-wrap items-center">
+                        {menus.map((menu, idx) => (
+                            <li key={idx} className="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
+                                <Link className="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href={menu.link}>
+                                    {menu.title}
+                                </Link>
+                            </li>
+                        ))}
+                        <li className="inline-block">
+                            <ThemeToggle />
+                        </li>
+                    </ul>
+                </div>
         </footer>
     )
 }
