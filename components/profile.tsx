@@ -110,7 +110,7 @@ function Experience() {
 }
 function SignUpNewsLetter() {
     return (
-        <Card>
+        <Card className="mt-4 lg:mt-0">
             <CardHeader>
                 <CardTitle className='flex items-center'>
                     <EnvelopeIcon className="h-5 w-5 flex-none" />
