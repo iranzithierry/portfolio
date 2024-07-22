@@ -35,7 +35,7 @@ export default function Header() {
             <nav className={`mt-4 relative max-w-2xl ${pathName == '/' ? 'w-fit' : 'w-full'} bg-white border shadow-md border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-zinc-800 dark:border-neutral-700`}>
                 <div className="px-4 md:px-0 flex justify-between items-center">
                     {/*  Logo*/}
-                        <div className={`${pathName == '/' && 'hidden'}`}>
+                        <div className={`${pathName == '/' && 'block md:hidden'}`}>
                             <Link className="flex items-center overflow-hidden" href="/" aria-label="Iranzi Thierry Avatar">
                                 <Image className="object-cover h-8 w-8 sm:h-10 sm:w-10 md:h-[50px] md:w-[50px] rounded-full" src={'/images/logo.png'} width={100} height={100} alt='Iranzi Thierry Avatar' />
                             </Link>
