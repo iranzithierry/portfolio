@@ -10,9 +10,9 @@ export default function Page() {
             imageUrl: '/images/projects/movo+.svg',
             websiteUrl: 'https://movo-plus.vercel.app/',
             domain: 'movo-plus.vercel.app',
-            techStacks: ['react', 'typescript', 'tailwindcss', 'django', 'stripe'],
+            techStacks: ['react', 'typescript', 'tailwindcss', 'django'],
             description:
-                'Global marketplace for sellers of T-shirts & Shoes this platform is build to accept the multi vendors who want to receive payents of their products via online using stripe payment',
+                'Global marketplace for sellers of T-shirts & Shoes this platform is build to accept the multi vendors who want to receive payents of their products via online using Stripe payment',
         },
         {
             name: 'Jeezy',
