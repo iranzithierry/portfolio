@@ -6,6 +6,24 @@ import React, { useState } from 'react'
 export default function Page() {
     const projects = [
         {
+            name: 'Movo+',
+            imageUrl: '/images/projects/movo+.svg',
+            websiteUrl: 'https://movo-plus.vercel.app/',
+            domain: 'movo-plus.vercel.app',
+            techStacks: ['react', 'typescript', 'tailwindcss', 'django', 'stripe'],
+            description:
+                'Global marketplace for sellers of T-shirts & Shoes this platform is build to accept the multi vendors who want to receive payents of their products via online using stripe payment',
+        },
+        {
+            name: 'Jeezy',
+            imageUrl: '/images/projects/jeezy.svg',
+            websiteUrl: 'https://jeezy.vercel.app',
+            domain: 'jeezy.vercel.app',
+            techStacks: ['react', 'typescript', 'tailwindcss', 'django'],
+            description:
+                'Jeezy is a hosting platform similar to Vercel, allowing users to deploy their websites for free from github repositories.',
+        },
+        {
             name: 'iBot',
             imageUrl: '/images/projects/ibot.png',
             websiteUrl: 'https://github.com/Iranzithierry/ibot-mobile-app/',
