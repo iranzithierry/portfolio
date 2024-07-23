@@ -12,7 +12,7 @@ export default function Page() {
             domain: 'movo-plus.vercel.app',
             techStacks: ['react', 'typescript', 'tailwindcss', 'django'],
             description:
-                'Global marketplace for sellers of T-shirts & Shoes this platform is build to accept the multi vendors who want to receive payents of their products via online using Stripe payment',
+                'Global marketplace for sellers of T-shirts & Shoes this platform was built to help the sellers who want to receive payments of their products all around world online using Stripe payment',
         },
         {
             name: 'Jeezy',
