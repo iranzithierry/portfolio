@@ -8,8 +8,8 @@ export default function Page() {
         {
             name: 'Movo+',
             imageUrl: '/images/projects/movo+.svg',
-            websiteUrl: 'https://movo-plus.vercel.app/',
-            domain: 'movo-plus.vercel.app',
+            websiteUrl: 'https://movoplus.com/vendors',
+            domain: 'movoplus.com',
             techStacks: ['react', 'typescript', 'tailwindcss', 'django'],
             description:
                 'Global marketplace for sellers of T-shirts & Shoes this platform was built to help the sellers who want to receive payments of their products all around world online using Stripe payment',
