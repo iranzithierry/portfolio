@@ -238,7 +238,7 @@ function Education() {
         },
         {
             period: "Jan 2019 - Sept 2024",
-            degree: "Ordinary Level In Math, Physics, ICT and iterature",
+            degree: "Ordinary Level In Math, Physics, ICT and Literature",
             institution: "Saint Bernadette"
         }
     ]
