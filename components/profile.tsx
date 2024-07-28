@@ -237,7 +237,7 @@ function Education() {
             institution: "College Geoge Fox"
         },
         {
-            period: "Jan 2019 - Sept 2024",
+            period: "Jan 2019 - Sept 2022",
             degree: "Ordinary Level In Math, Physics, ICT and Literature",
             institution: "Saint Bernadette"
         }
