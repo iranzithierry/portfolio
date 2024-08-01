@@ -6,6 +6,7 @@ import SocialIcons from './social-icons'
 import { DownloadIcon } from '@radix-ui/react-icons'
 import { AcademicCapIcon, BriefcaseIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from './ui/badge'
 
 export default function Profile() {
     return (
@@ -32,7 +33,8 @@ export default function Profile() {
                 <main className="flex-1 overflow-y-auto lg:col-span-3">
                     <Testimonials />
                     <Education />
-                     <Articles />
+                    <Skills />
+                    <Articles />
                 </main>
                 <aside className="lg:col-span-2 flex flex-col flex-col-reverse lg:block overflow-y-auto lg:space-y-4">
                     <SignUpNewsLetter />
@@ -263,6 +265,37 @@ function Education() {
                         </p>
                     </div>
                 ))}
+            </div>
+        </div>
+    )
+}
+function Skills() {
+
+    const skills = [
+        "React",
+        "Next.js",
+        "Typescript",
+        "Tailwind CSS",
+        "Python",
+        "Php",
+        "Postgres",
+        "Mysql",
+        "Docker",
+        "Nginx",
+        "Linux",
+        "Git",
+    ];
+    return (
+        <div className="mt-10 sm:mt-14">
+            <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+                Skills
+            </h2>
+            <div className="flex min-h-0 flex-col gap-y-3">
+                <div className="flex flex-wrap gap-1">
+                    {skills.map((skill, id) => (
+                        <Badge key={skill}>{skill}</Badge>
+                    ))}
+                </div>
             </div>
         </div>
     )
