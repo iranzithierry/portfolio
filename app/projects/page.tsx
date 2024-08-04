@@ -17,11 +17,11 @@ export default function Page() {
             links: [
                 {
                   type: "Website",
-                  href: "https://chatcollect.com",
+                  href: "https://movoplus.com",
                   icon: <Globe className="size-2.5" />,
                 },
               ],
-            dates: "Jan 2024 - Feb 2024",
+            dates: "Jun 2024 - Present",
             active: true,
             tags: ['React',  'Shadcn UI','Typescript', 'Tailwindcss', 'Django', 'Stripe'],
             description:
