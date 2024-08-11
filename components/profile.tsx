@@ -67,6 +67,13 @@ function Experience() {
             companyImageSrc: '/images/companies/uruti-hub.png',
             companyRole: 'Frontend Developer',
             startYear: '2023',
+            endYear: '2024',
+        },
+        {
+            companyName: 'Blockchain Tech Solutions',
+            companyImageSrc: '/images/companies/bts.png',
+            companyRole: 'Senior Fullstack Developer',
+            startYear: '2024',
             endYear: 'Present',
         }
     ]
