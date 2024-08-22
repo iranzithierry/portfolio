@@ -31,7 +31,7 @@ export default function Profile() {
             </div>
             <div className="grid lg:grid-cols-5 gap-4 lg:gap-12 items-stretch overflow-hidden">
                 <main className="flex-1 overflow-y-auto lg:col-span-3">
-                    <Testimonials />
+                    {/*<Testimonials />*/}
                     <Education />
                     <Skills />
                     <Articles />
