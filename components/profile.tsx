@@ -63,19 +63,20 @@ function About() {
 function Experience() {
     const experienceData = [
         {
+            companyName: 'Blockchain Tech Solutions',
+            companyImageSrc: '/images/companies/bts.png',
+            companyRole: 'Senior Fullstack Developer',
+            startYear: '2024',
+            endYear: 'Present',
+        },
+        {
             companyName: 'Uruti Hub',
             companyImageSrc: '/images/companies/uruti-hub.png',
             companyRole: 'Frontend Developer',
             startYear: '2023',
             endYear: '2024',
         },
-        {
-            companyName: 'Blockchain Tech Solutions',
-            companyImageSrc: '/images/companies/bts.png',
-            companyRole: 'Senior Fullstack Developer',
-            startYear: '2024',
-            endYear: 'Present',
-        }
+        
     ]
     return (
         <Card>
