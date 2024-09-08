@@ -284,6 +284,7 @@ function Skills() {
         "Next.js",
         "Typescript",
         "Tailwind CSS",
+        "Prisma"
         "Python",
         "Php",
         "Postgres",
