@@ -290,7 +290,7 @@ function Skills() {
         "NestJS",
         "GraphQL",
         "Python",
-        "Php",
+        "Laravel",
         "Postgres",
         "Mysql",
         "Docker",
