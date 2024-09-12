@@ -110,7 +110,7 @@ function Experience() {
                 </ol>
             </CardContent>
             <CardFooter>
-                <a href="/documents/cv.pdf" download>
+                <a href="/documents/cv.pdf" className='w-full' download>
                     <Button variant={'outline'} size={'sm'} className='w-full'>
                         <span>Download CV </span>
                         <DownloadIcon className='h-4 w-4' />
