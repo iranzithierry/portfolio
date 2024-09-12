@@ -281,10 +281,12 @@ function Skills() {
 
     const skills = [
         "React",
-        "Next.js",
+        "Next.JS",
         "Typescript",
         "Tailwind CSS",
-        "Prisma"
+        "Prisma",
+        "NestJS",
+        "GraphQL",
         "Python",
         "Php",
         "Postgres",
