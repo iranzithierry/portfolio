@@ -22,7 +22,7 @@ export default function Profile() {
                             Iranzi Thierry
                         </h1>
                         <p className="text-sm text-gray-600 dark:text-neutral-400">
-                            Software Engineer, DevOps
+                            Software Engineer
                         </p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ function About() {
     return (
         <div className="mt-8 max-w-xl">
             <p className="text-sm text-gray-600 dark:text-neutral-400">
-                As a passionate software engineer and DevOps with over four years of experience.
+                As a passionate software engineer with over four years of experience.
                 I specialize in developing robust and scalable solutions.
             </p>
             <p className="mt-3 text-sm text-gray-600 dark:text-neutral-400">
@@ -110,10 +110,12 @@ function Experience() {
                 </ol>
             </CardContent>
             <CardFooter>
-                <Button variant={'outline'} size={'sm'} className='w-full'>
-                    <span>Download CV </span>
-                    <DownloadIcon className='h-4 w-4' />
-                </Button>
+                <a href="/documents/cv.pdf" download>
+                    <Button variant={'outline'} size={'sm'} className='w-full'>
+                        <span>Download CV </span>
+                        <DownloadIcon className='h-4 w-4' />
+                    </Button>
+                </a>
             </CardFooter>
         </Card>
     )
