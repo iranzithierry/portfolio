@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "I'm Thierry, a software engineer based in Rwanda. I'm the founder and CEO of Movo+, where we help vendors to sell their products online.",
   keywords: "iranzi thierry, thierry, iranzi, iranzithierry, thierry iranzi, thierryiranzi",
   icons: {
-    icon: '/images/favicon.ico',
+    icon: '/images/favicon.png',
 
   },
 }
