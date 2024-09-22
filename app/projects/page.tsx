@@ -28,6 +28,24 @@ export default function Page() {
                 'Global marketplace for sellers of T-shirts & Shoes this platform was built to help the sellers who want to receive payments of their products all around world online using Stripe payment',
         },
         {
+            name: 'Definitive+',
+            image: '/images/projects/definitive+.png',
+            video: '',
+            href: 'https://definitiveplus.vercel.app/',
+            links: [
+                {
+                  type: "Website",
+                  href: "https://definitiveplus.vercel.app/",
+                  icon: <Globe className="size-2.5" />,
+                },
+              ],
+            dates: "Sept 2024 - Present",
+            active: true,
+            tags: ['React',  'Shadcn UI','Typescript', 'Tailwindcss', 'Prisma', 'Redis', 'Postgresql'],
+            description:
+                'Definitive+ was created to assist users from Rwanda in securing driving test spots. Simply select the district where you would like to take the test, and the system continuously monitors availability in that area. Once a slot becomes available, The user receives a message guiding them to book their spot on the official Irembo platform (irembo.gov.rw).',
+        },
+        {
             name: 'Jeezy',
             image: '/images/projects/jeezy.svg',
             video: '',
