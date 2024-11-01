@@ -246,7 +246,7 @@ function Education() {
         {
             period: "Jan 2023 - Present",
             degree: "Advanced Level In Software Development",
-            institution: "College Geoge Fox"
+            institution: "College George Fox"
         },
         {
             period: "Jan 2019 - Sept 2022",
