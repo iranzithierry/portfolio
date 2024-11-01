@@ -68,6 +68,7 @@ function Experience() {
             companyRole: 'Senior Fullstack Developer',
             startYear: '2024',
             endYear: 'Present',
+            site: "London - England",
         },
         {
             companyName: 'Uruti Hub',
@@ -75,6 +76,7 @@ function Experience() {
             companyRole: 'Frontend Developer',
             startYear: '2023',
             endYear: '2024',
+            site: "Kigali - Rwanda",
         },
         
     ]
@@ -95,7 +97,12 @@ function Experience() {
                             </div>
                             <dl className="flex flex-auto flex-wrap gap-x-2">
                                 <dt className="sr-only">Company</dt>
-                                <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{experience.companyName}</dd>
+                                <div className="w-full flex-none">
+                                    <dd className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{experience.companyName}</dd>
+                                    <dd className="ml-auto space-x-1 text-xs text-zinc-400 dark:text-zinc-600">
+                                        {experience.site}
+                                    </dd>
+                                </div>
                                 <dt className="sr-only">Role</dt>
                                 <dd className="text-xs text-zinc-500 dark:text-zinc-400">{experience.companyRole}</dd>
                                 <dt className="sr-only">Date</dt>
@@ -104,6 +111,7 @@ function Experience() {
                                     <span aria-hidden="true">—</span>
                                     <time>{experience.endYear}</time>
                                 </dd>
+                                
                             </dl>
                         </li>
                     ))}
