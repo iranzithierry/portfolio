@@ -7,10 +7,10 @@ import { ThemeToggle } from './theme-toggle'
 export default function Footer() {
     return (
         <footer className="mx-auto pt-12 mb-auto">
-                <div className="flex flex-col lg:flex-row flex-col-reverse lg:flex-wrap justify-center lg:justify-between items-center gap-2">
+                <div className="flex lg:flex-row flex-col-reverse lg:flex-wrap justify-center lg:justify-between items-center gap-2">
                     <div>
                         <p className="text-xs text-gray-600 dark:text-neutral-400">
-                            © 2024 Iranzi Thierry. All rights reserved.
+                            © 2024 @iranzithierry. All rights reserved.
                         </p>
                     </div>
                     <ul className="flex flex-wrap items-center">

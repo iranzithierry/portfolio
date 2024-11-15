@@ -11,20 +11,20 @@ export const menus = [
         link: '/'
     },
     {
-        title: 'About',
-        link: '/about'
-    },
-    {
         title: 'Projects',
         link: '/projects'
     },
     {
+        title: 'About',
+        link: '/#'
+    },
+    {
         title: 'Articles',
-        link: '/articles'
+        link: '/#'
     },
     {
         title: 'Tools',
-        link: '/tools'
+        link: '/#'
     },
 ]
 export default function Header() {

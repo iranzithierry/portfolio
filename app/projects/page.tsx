@@ -8,7 +8,24 @@ import React, { useState } from 'react'
 
 export default function Page() {
     const projects = [
-        
+        {
+            name: 'Cognova AI',
+            image: '/images/projects/cognova-ai.png',
+            video: '',
+            href: 'https://app.cognova.io',
+            links: [
+                {
+                  type: "Website",
+                  href: "https://app.cognova.io",
+                  icon: <Globe className="size-2.5" />,
+                },
+              ],
+            dates: "October 2024 - Present",
+            active: true,
+            tags: ['Next.JS', 'FastAPI', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres','pgVector', 'Appwrite'],
+            description:
+                'Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.',
+        },
         {
             name: 'Movo+',
             image: '/images/projects/movo+.svg',
@@ -21,7 +38,7 @@ export default function Page() {
                   icon: <Globe className="size-2.5" />,
                 },
               ],
-            dates: "Jun 2024 - Present",
+            dates: "Jun 2024 - Sept 2024",
             active: true,
             tags: ['Next.JS', 'Django', 'Tailwindcss', 'Shadcn UI','Typescript', 'Stripe'],
             description:
@@ -123,7 +140,7 @@ export default function Page() {
                                 <span className="relative z-10 dark:text-gray-200">{project.name}</span>
                             </a>
                         </h2>
-                        <p className="relative line-clamp-3 max-h-[5em] z-10 mt-2 text-sm text-zinc-600 dark:text-gray-400 transition-all ease-in-out duration-100">
+                        <p className="relative line-clamp-5 z-10 mt-2 text-sm text-zinc-600 dark:text-gray-400 transition-all ease-in-out duration-100">
                             {project.description}
                         </p>
                         {project.tags && project.tags.length > 0 && (

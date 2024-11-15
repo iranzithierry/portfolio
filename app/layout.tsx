@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: 'Iranzi Thierry',
     template: `%s | Software Engineer`
   },
-  description: "I'm Thierry, a software engineer based in Rwanda. I'm the founder and CEO of Movo+, where we help vendors to sell their products online.",
+  description: "Iranzi Thierry a software engineer with over four years of experience. I specialize in developing robust and scalable solutions.",
   keywords: "iranzi thierry, thierry, iranzi, iranzithierry, thierry iranzi, thierryiranzi",
   icons: {
     icon: '/images/favicon.png',
