@@ -58,6 +58,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           </GlobalProvider>
         </Suspense>
         <Analytics />
+        <script async src={`https://cognova.io/embed.js`} id={"cm45saveu003sh8ixb741iv1f"}></script>
       </body>
     </html>
   );
