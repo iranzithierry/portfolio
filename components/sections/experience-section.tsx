@@ -6,6 +6,7 @@ import {
     TimelineHeader,
     TimelineContent,
 } from "@/components/ui/timeline";
+import { cn } from "@/lib/utils";
 
 export default function ExperienceSection() {
     const experienceData = [
@@ -38,7 +39,7 @@ export default function ExperienceSection() {
                         <TimelineConnector />
                     )}
                     <TimelineHeader>
-                        <div className={"-ml-5 -mt-5 grow-0 shrink-0 rounded-full h-14 w-14 bg-secondary border border:theme(colors.secondary.fg/15%) z-10 p-1 overflow-hidden flex items-center"}>
+                        <div className={cn(idx == 0 ? "bg-primary border-primary" : "bg-secondary border-secondary", "-ml-5 -mt-5 grow-0 shrink-0 rounded-full h-14 w-14 border z-10 p-1 overflow-hidden flex items-center")}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img alt={experience.companyName} className="h-full object-cover rounded-full bg-white p-1" src={experience.companyImageSrc} />
                         </div>

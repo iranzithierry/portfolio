@@ -6,6 +6,7 @@ import {
     TimelineHeader,
     TimelineContent,
 } from "@/components/ui/timeline";
+import { cn } from "@/lib/utils";
 import { AcademicCapIcon } from "@heroicons/react/24/outline";
 
 export default function EducationSection() {
@@ -35,7 +36,7 @@ export default function EducationSection() {
                         <TimelineConnector />
                     )}
                     <TimelineHeader>
-                        <div className={"-ml-5 -mt-5 rounded-full shrink-0 h-14 w-14 bg-secondary border border:theme(colors.secondary.fg/15%) z-10 p-1 overflow-hidden flex items-center"}>
+                        <div className={cn(idx == 0 ? "bg-primary border-primary" : "bg-secondary border-secondary", "-ml-5 -mt-5 grow-0 shrink-0 rounded-full h-14 w-14 border z-10 p-1 overflow-hidden flex items-center")}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <AcademicCapIcon className="h-full object-cover rounded-full bg-white text-primary p-1" />
                         </div>
