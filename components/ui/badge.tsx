@@ -1,40 +1,50 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+"use client";
 
-import { cn } from "@/lib/utils"
+import React from "react";
 
-const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-  {
-    variants: {
-      variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
-        success:
-          "border-transparent bg-success text-success-foreground shadow hover:bg-success/80",
-        warning:
-          "border-transparent bg-warning text-warning-foreground shadow hover:bg-warning/80",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
-        outline: "text-foreground",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-)
+import { tv, type VariantProps } from "tailwind-variants";
 
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+const badgeIntents = {
+	primary:
+		"bg-primary/10 dark:bg-primary/15 text-primary dark:text-primary group-hover:bg-primary/15 dark:group-hover:bg-primary/20",
+	secondary:
+		"bg-secondary group-hover:bg-muted dark:bg-secondary dark:group-hover:bg-muted text-secondary-fg",
+	success:
+		"bg-emerald-500/15 text-emerald-700 group-hover:bg-emerald-500/25 dark:bg-emerald-500/10 dark:text-emerald-400 dark:group-hover:bg-emerald-500/20",
+	info: "bg-info/15 dark:bg-info/15 text-info group-hover:bg-info/20 dark:group-hover:bg-info/20",
+	warning:
+		"bg-warning/10 dark:bg-warning/15 text-warning-fg dark:text-warning group-hover:bg-warning/15 dark:group-hover:bg-warning/20",
+	danger: "bg-danger/10 dark:bg-danger/15 text-danger group-hover:bg-danger/15 dark:group-hover:bg-danger/20",
+};
+const badgeShapes = {
+	square: "rounded-md px-1.5",
+	circle: "px-2 rounded-full",
+};
+const badgeStyles = tv({
+	base: "inline-flex items-center gap-x-1.5 py-0.5 text-xs/5 font-medium forced-colors:outline [&_[data-slot=icon]]:size-3",
+	variants: {
+		intent: { ...badgeIntents },
+		shape: { ...badgeShapes },
+	},
+	defaultVariants: {
+		intent: "primary",
+		shape: "square",
+	},
+});
 
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  )
+interface BadgeProps
+	extends React.HTMLAttributes<HTMLDivElement>,
+		VariantProps<typeof badgeStyles> {
+	className?: string;
+	children: React.ReactNode;
 }
 
-export { Badge, badgeVariants }
+const Badge = ({ children, intent, shape, className, ...props }: BadgeProps) => {
+	return (
+		<span {...props} className={badgeStyles({ intent, shape, className })}>
+			{children}
+		</span>
+	);
+};
+
+export { Badge, badgeIntents, badgeStyles, badgeShapes };

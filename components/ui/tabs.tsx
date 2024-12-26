@@ -1,55 +1,146 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { LayoutGroup, motion } from "motion/react";
+import {
+	Tab as TabPrimitive,
+	TabList,
+	type TabListProps,
+	TabPanel,
+	type TabPanelProps,
+	type TabProps,
+	Tabs as TabsPrimitive,
+	type TabsProps,
+} from "react-aria-components";
+import { twJoin } from "tailwind-merge";
+import { tv } from "tailwind-variants";
 
-const Tabs = TabsPrimitive.Root
+import { cn, cr } from "./primitive";
 
-const TabsList = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.List>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.List
-    ref={ref}
-    className={cn(
-      "inline-flex h-9 items-center justify-center rounded-lg bg-accent p-1 text-muted-foreground",
-      className
-    )}
-    {...props}
-  />
-))
-TabsList.displayName = TabsPrimitive.List.displayName
+const tabsStyles = tv({
+	base: "group flex gap-4 forced-color-adjust-none",
+	variants: {
+		orientation: {
+			horizontal: "flex-col",
+			vertical: "w-[800px] flex-row",
+		},
+	},
+});
 
-const TabsTrigger = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.Trigger
-    ref={ref}
-    className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow",
-      className
-    )}
-    {...props}
-  />
-))
-TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
+const Tabs = (props: TabsProps) => {
+	return (
+		<TabsPrimitive
+			{...props}
+			className={cr(props.className, (className, renderProps) =>
+				tabsStyles({
+					...renderProps,
+					className,
+				}),
+			)}
+		/>
+	);
+};
 
-const TabsContent = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.Content
-    ref={ref}
-    className={cn(
-      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-      className
-    )}
-    {...props}
-  />
-))
-TabsContent.displayName = TabsPrimitive.Content.displayName
+const tabListStyles = tv({
+	base: "flex forced-color-adjust-none",
+	variants: {
+		orientation: {
+			horizontal: "flex-row gap-x-5 border-b border-border",
+			vertical: "flex-col items-start gap-y-4 border-l",
+		},
+	},
+});
 
-export { Tabs, TabsList, TabsTrigger, TabsContent }
+const List = <T extends object>(props: TabListProps<T>) => {
+	const id = React.useId();
+	return (
+		<LayoutGroup id={id}>
+			<TabList
+				{...props}
+				className={cr(props.className, (className, renderProps) =>
+					tabListStyles({ ...renderProps, className }),
+				)}
+			/>
+		</LayoutGroup>
+	);
+};
+
+const tabStyles = tv({
+	base: [
+		"relative flex cursor-default items-center whitespace-nowrap rounded-full text-sm font-medium outline-none transition hover:text-fg [&>[data-slot=icon]]:mr-2 [&>[data-slot=icon]]:size-4",
+		// hor
+		"group-orientation-vertical:w-full group-orientation-vertical:py-0 group-orientation-vertical:pl-4 group-orientation-vertical:pr-2",
+		// ver
+		"group-orientation-horizontal:pb-3",
+	],
+	variants: {
+		isSelected: {
+			false: "text-muted-fg",
+			true: "text-fg",
+		},
+		isFocused: { false: "ring-0", true: "text-fg" },
+		isDisabled: {
+			true: "text-muted-fg/50",
+		},
+	},
+});
+
+const Tab = ({ children, ...props }: TabProps) => {
+	return (
+		<TabPrimitive
+			{...props}
+			className={cr(props.className, (_className, renderProps) =>
+				tabStyles({
+					...renderProps,
+					className: twJoin("href" in props && "cursor-pointer", _className),
+				}),
+			)}
+		>
+			{({ isSelected }) => (
+				<>
+					{children as React.ReactNode}
+					{isSelected && (
+						<motion.span
+							className={cn(
+								"absolute rounded bg-fg",
+								// horizontal
+								"group-orientation-horizontal:inset-x-0 group-orientation-horizontal:-bottom-px group-orientation-horizontal:h-0.5 group-orientation-horizontal:w-full",
+								// vertical
+								"group-orientation-vertical:left-0 group-orientation-vertical:h-[calc(100%-10%)] group-orientation-vertical:w-0.5 group-orientation-vertical:transform",
+							)}
+							layoutId="current-selected"
+							transition={{ type: "spring", stiffness: 500, damping: 40 }}
+						/>
+					)}
+				</>
+			)}
+		</TabPrimitive>
+	);
+};
+
+const tabPanelStyles = tv({
+	base: "flex-1 text-sm text-fg",
+	variants: {
+		isFocusVisible: {
+			true: "outline-none",
+		},
+	},
+});
+
+const Panel = (props: TabPanelProps) => {
+	return (
+		<TabPanel
+			{...props}
+			className={cr(props.className, (className, renderProps) =>
+				tabPanelStyles({ ...renderProps, className }),
+			)}
+		/>
+	);
+};
+
+Tabs.List = List;
+Tabs.Tab = Tab;
+Tabs.Panel = Panel;
+
+export { Tabs };

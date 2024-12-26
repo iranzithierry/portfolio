@@ -1,9 +1,10 @@
 'use client';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import React, { useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { cn } from '@/lib/utils';
 
 export const menus = [
     {
@@ -11,20 +12,20 @@ export const menus = [
         link: '/'
     },
     {
+        title: 'About',
+        link: '/about'
+    },
+    {
+        title: 'Articles',
+        link: '/articles'
+    },
+    {
         title: 'Projects',
         link: '/projects'
     },
     {
-        title: 'About',
-        link: '/#'
-    },
-    {
-        title: 'Articles',
-        link: '/#'
-    },
-    {
-        title: 'Tools',
-        link: '/#'
+        title: 'Resume',
+        link: '/resume'
     },
 ]
 export default function Header() {
@@ -32,23 +33,19 @@ export default function Header() {
     const pathName = usePathname()
     return (
         <header className="fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-            <nav className={`mt-4 relative max-w-2xl ${pathName == '/' ? 'w-full md:w-fit' : 'w-full'} bg-white border shadow-md border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-zinc-800 dark:border-neutral-700`}>
+            <nav className={`mt-4 relative max-w-2xl ${pathName == '/' ? 'w-full md:w-fit' : 'w-full'} bg-white border shadow-md border-gray-200 rounded-[2rem] mx-2 py-1 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-zinc-800 dark:border-neutral-700`}>
                 <div className="px-4 md:px-0 flex justify-between items-center">
-                    {/*  Logo*/}
-                        <div className={`${pathName == '/' && 'block md:hidden'}`}>
-                            <Link className="flex items-center overflow-hidden" href="/" aria-label="Iranzi Thierry Avatar">
-                                <Image className="object-cover h-8 w-8 sm:h-10 sm:w-10 md:h-[50px] md:w-[50px] rounded-full" src={'/images/logo.png'} width={100} height={100} alt='Iranzi Thierry Avatar' />
-                            </Link>
-                        </div>
-                    {/*  End Logo*/}
+                    <div className={`${pathName == '/' && 'block  md:hidden'}`}>
+                        <Link className={cn(mobileMenuOpened ? "-ml-2 mt-1" : "-ml-3", "flex items-center overflow-hidden h-fit rounded-[2rem]")} href="/" aria-label="Iranzi Thierry Avatar">
+                            <Image className="object-cover shrink-0 aspect-square size-8 sm:size-10" src={'/images/iranzithierry.jpg'} width={100} height={100} alt='Iranzi Thierry Avatar' />
+                        </Link>
+                    </div>
 
                     <div className="md:hidden">
-                        {/*  Toggle Button*/}
                         <button type="button" className="flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-expanded="false" >
                             <Bars3Icon onClick={() => setMobileMenuOpened(true)} className={`${mobileMenuOpened && 'hidden'} shrink-0 size-3.5`} width="24" height="24" />
                             <XMarkIcon onClick={() => setMobileMenuOpened(false)} className={`${mobileMenuOpened ? 'block' : 'hidden'}  shrink-0 size-4`} width="24" height="24" />
                         </button>
-                        {/* End Toggle Button*/}
                     </div>
                 </div>
 

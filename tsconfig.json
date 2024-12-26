@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "resources/articles/how-to-integrate-stripe-in-next-js.mdx"  ],
   "exclude": [
     "node_modules"
   ]

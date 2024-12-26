@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Suspense } from 'react';
 import Header from "@/components/header";
 import type { Metadata, Viewport } from "next";
-import { displayFont, monoFont } from "@/lib/fonts";
+import { fontSans } from "@/lib/fonts";
 import { Analytics } from '@vercel/analytics/react';
 import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers"
@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("bg-background font-sans antialiased", displayFont.variable, monoFont.variable)}>
+      <body className={cn("bg-bg font-sans antialiased", fontSans.variable)}>
         <Suspense fallback={<div>Loading...</div>}>
           <GlobalProvider>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -58,7 +58,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           </GlobalProvider>
         </Suspense>
         <Analytics />
-        <script async src={`https://cognova.io/embed.js`} id={"cm45saveu003sh8ixb741iv1f"}></script>
+        {/* <script async src={`https://cognova.io/embed.js`} id={"cm45saveu003sh8ixb741iv1f"}></script> */}
       </body>
     </html>
   );

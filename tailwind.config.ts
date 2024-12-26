@@ -1,12 +1,13 @@
-import type { Config } from "tailwindcss"
+import ta from "tailwindcss-animate";
+import tt from "@tailwindcss/typography";
+import type { Config } from "tailwindcss";
+import trac from "tailwindcss-react-aria-components";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import { withTV } from "tailwind-variants/transformer";
 
-const config = {
-  darkMode: ["class"],
-  content: [
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-  ],
-  prefix: "",
+const config = withTV({
+  darkMode: ['class'],
+  content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     container: {
       center: true,
@@ -17,73 +18,71 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system"],
-        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular"],
-        display: ["var(--font-display)", "Inter", "ui-monospace", "SFMono-Regular"],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        light: 'hsl(var(--light))',
+        dark: 'hsl(var(--dark))',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        toggle: 'hsl(var(--toggle))',
+        bg: 'hsl(var(--bg))',
+        fg: 'hsl(var(--fg))',
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: 'hsl(var(--primary))',
+          fg: 'hsl(var(--primary-fg))',
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: 'hsl(var(--secondary))',
+          fg: 'hsl(var(--secondary-fg))'
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        success: {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
-        },
-        warning: {
-          DEFAULT: "hsl(var(--warning))",
-          foreground: "hsl(var(--warning-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+        tertiary: {
+          DEFAULT: 'hsl(var(--tertiary))',
+          fg: 'hsl(var(--tertiary-fg))'
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: 'hsl(var(--accent))',
+          fg: 'hsl(var(--accent-fg))',
+          subtle: 'hsl(var(--accent-subtle))',
+          'subtle-fg': 'hsl(var(--accent-subtle-fg))'
         },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          fg: 'hsl(var(--success-fg))'
         },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+        info: {
+          DEFAULT: 'hsl(var(--info))',
+          fg: 'hsl(var(--info-fg))'
         },
+        danger: {
+          DEFAULT: 'hsl(var(--danger))',
+          fg: 'hsl(var(--danger-fg))'
+        },
+        warning: {
+          DEFAULT: 'hsl(var(--warning))',
+          fg: 'hsl(var(--warning-fg))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          fg: 'hsl(var(--muted-fg))'
+        },
+        overlay: {
+          DEFAULT: 'hsl(var(--overlay))',
+          fg: 'hsl(var(--overlay-fg))'
+        }
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "caret-blink": {
-          "0%,70%,100%": { opacity: "1" },
-          "20%,50%": { opacity: "0" },
-        },
-      },
-      animation: {
-        "caret-blink": "caret-blink 1.25s ease-out infinite",
-      },
-    },
+        '3xl': 'calc(var(--radius) + 7.5px)',
+        '2xl': 'calc(var(--radius) + 5px)',
+        xl: 'calc(var(--radius) + 2.5px)',
+        lg: 'calc(var(--radius))',
+        md: 'calc(var(--radius) - 2.5px)',
+        sm: 'calc(var(--radius) - 5px)'
+      }
+    }
   },
-  plugins: [
-    require('autoprefixer'),
-    require("tailwindcss-animate"), 
-    require('@tailwindcss/typography')
-  ]} satisfies Config
+  plugins: [ta, tt, trac],
+}) satisfies Config;
 
 export default config
