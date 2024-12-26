@@ -16,7 +16,7 @@ export default function Page() {
           </div>
 
           <div className="grow">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-neutral-200">Iranzi Thierry</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-800 dark:text-neutral-200">Iranzi Thierry</h1>
             <p className="text-sm text-gray-600 dark:text-neutral-400">
               Software Engineer
             </p>
