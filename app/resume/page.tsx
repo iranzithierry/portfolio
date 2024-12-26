@@ -1,9 +1,13 @@
+import { Metadata } from "next";
 import SkillsSection from "@/components/sections/skills-section";
 import EducationSection from "@/components/sections/educations-section";
 import ExperienceSection from "@/components/sections/experience-section";
 import ToolsSection from "@/components/sections/tools-section";
 import LanguageSection from "@/components/sections/languages-section";
 
+export const metadata: Metadata = {
+    title: "Resume",
+}
 export default function Page() {
     return (
         <div className='flex flex-col md:flex-row gap-4'>

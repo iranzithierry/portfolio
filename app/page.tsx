@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import Image from 'next/image'
 import SocialIcons from '@/components/social-icons'
 import AboutSection from '@/components/sections/about-section'
-import ArticlesSection from '@/components/sections/articles-section'
+import ArticlesSection, { ArticlesSectionLoadingSkeleton } from '@/components/sections/articles-section'
 import ProjectsSection from '@/components/sections/projects-section'
 import Link from 'next/link'
 
@@ -31,7 +31,7 @@ export default function Page() {
             <h2 className="mb-5 text-2xl sm:text-3xl font-semibold text-fg">
               Latest Articles
             </h2>
-            <Suspense fallback={<h1>Loading articles....</h1>}>
+            <Suspense fallback={<ArticlesSectionLoadingSkeleton/>}>
               <ArticlesSection />
             </Suspense>
           </div>

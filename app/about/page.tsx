@@ -1,6 +1,10 @@
-import ExperienceSection from "@/components/sections/experience-section";
 import Image from "next/image";
+import { Metadata } from "next";
+import ExperienceSection from "@/components/sections/experience-section";
 
+export const metadata: Metadata = {
+    title: "About Troy",
+}
 export default function Page() {
     return (
         <div>

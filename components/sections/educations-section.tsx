@@ -55,7 +55,7 @@ export default function EducationSection() {
                     </TimelineHeader>
                     <TimelineContent>
                         <p className="text-sm text-muted-fg max-w-xl">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam neque, rerum quaerat nisi corrupti deleniti molestiae eius repellat praesentium ad voluptas velit, nesciunt maxime reprehenderit soluta. Quia repellendus consequatur ullam.
+                            {education.description}
                         </p>
                     </TimelineContent>
                 </TimelineItem>

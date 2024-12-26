@@ -1,6 +1,10 @@
 import React from 'react'
+import { Metadata } from "next";
 import ProjectsSection from '@/components/sections/projects-section'
 
+export const metadata: Metadata = {
+    title: "Projects",
+}
 export default function Page() {
   return (
     <div className='space-y-3 sm:space-y-6'>
