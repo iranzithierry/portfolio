@@ -13,6 +13,7 @@ export default function ExperienceSection() {
             companyName: 'Blockchain Tech Solutions',
             companyImageSrc: '/images/companies/bts.png',
             companyRole: 'Senior Fullstack Developer',
+            roleDescription: "Designed and developed Telegram web applications and mini-games, integrating features like NFTs, minting, and wallet transactions. Built and maintained dashboards with real-time analytics, ensuring optimal performance and scalability for applications handling 100K user events per minute. Implemented efficient rendering techniques to display events in real-time, enhancing user experience.",
             startYear: '2024',
             endYear: 'Present',
             site: "London - England",
@@ -21,12 +22,14 @@ export default function ExperienceSection() {
             companyName: 'Uruti Hub',
             companyImageSrc: '/images/companies/uruti-hub.png',
             companyRole: 'Frontend Developer',
+            roleDescription: "Gained hands-on experience by collaborating with senior developers and building web applications.",
             startYear: '2023',
             endYear: '2024',
             site: "Kigali - Rwanda",
         },
-
-    ]
+    ];
+    
+    
     return (
         <Timeline>
             {experienceData.map((experience, idx) => (

@@ -13,19 +13,20 @@ export default function EducationSection() {
     const educationData = [
         {
             startYear: "Jan 2023",
-            endYear: " Present",
-            degree: "Advanced Level In Software Development",
+            endYear: "Present",
+            degree: "Advanced Level in Software Development",
             institution: "College George Fox",
-            description: ""
+            description: "Focused on advanced topics in software development, including programming languages, software design, and project management. Gained hands-on experience building software projects and collaborating on team-based assignments, emphasizing practical skills and industry relevance.",
         },
         {
             startYear: "Jan 2019",
             endYear: "Sept 2022",
-            degree: "Ordinary Level In Math, Physics, ICT and Literature",
+            degree: "Ordinary Level in Math, Physics, ICT, and Literature",
             institution: "Saint Bernadette",
-            description: ""
-        }
-    ]
+            description: "Studied a well-rounded curriculum combining analytical subjects such as mathematics, physics, and ICT with critical thinking and communication skills from literature. Built a strong foundation in logical problem-solving and technical concepts.",
+        },
+    ];
+    
     return (
         <Timeline>
             {educationData.map((education, idx) => (

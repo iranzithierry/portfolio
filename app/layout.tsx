@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Iranzi Thierry a software engineer with over four years of experience. I specialize in developing robust and scalable solutions.",
   keywords: "iranzi thierry, thierry, iranzi, iranzithierry, thierry iranzi, thierryiranzi",
   icons: {
-    icon: '/images/favicon.png',
+    icon: '/images/favicon.ico',
 
   },
 }
