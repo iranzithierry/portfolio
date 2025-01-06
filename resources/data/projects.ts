@@ -7,7 +7,7 @@ export const projects = [
         name: 'Cognova AI',
         image: '/images/projects/cognova-ai.png',
         video: '',
-        href: 'https://app.cognova.io',
+        href: 'https://cognova.io?ref=portfolio&from=https://iranzi.vercel.app/projects',
         links: [
             {
                 type: "Website",
