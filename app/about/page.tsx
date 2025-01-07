@@ -16,7 +16,7 @@ export default function Page() {
                 <div>
                     <h3 className="text-fg text-2xl font-semibold">Short Bio</h3>
                     <p className="text-muted-fg font-medium">
-                        I am a product maker and full-stack developer based in Kigali, Rwanda.
+                        I am a product creator and full-stack developer based in Kigali, Rwanda.
                         I am passionate about creating impactful products that help people and drive change.
                         A strong advocate of open-source software, I ensure most of my projects are openly accessible.
                         I also enjoy sharing knowledge about technology and programming, often writing code using the <a className="text-primary" href="/articles/understanding-the-t3-stack?ref=current">T3 Stack</a>.
