@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="flex lg:flex-row flex-col-reverse lg:flex-wrap justify-center lg:justify-between items-center gap-2">
                     <div>
                         <p className="text-xs text-muted-fg">
-                            © 2024 @iranzithierry. All rights reserved.
+                            © 2025 @iranzithierry. All rights reserved.
                         </p>
                     </div>
                     <ul className="flex flex-wrap items-center">
