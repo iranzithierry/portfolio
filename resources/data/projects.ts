@@ -11,7 +11,7 @@ export const projects = [
         links: [
             {
                 type: "Website",
-                href: "https://app.cognova.io",
+                href: "https://cognova.io?ref=portfolio&from=https://iranzi.vercel.app/projects",
                 icon: Globe,
             },
         ],
