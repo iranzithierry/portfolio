@@ -37,7 +37,7 @@ export const projects = [
         active: true,
         tags: ['Rust', 'Javascript'],
         description:
-            'A lightweight Redis-like key-value database built in Rust with it's own JS client with 0 dependency.',
+            "A lightweight Redis-like key-value database built in Rust with it's own JS client with 0 dependency.",
     },
     {
         name: 'Movo+',
