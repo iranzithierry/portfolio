@@ -22,6 +22,24 @@ export const projects = [
             'Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.',
     },
     {
+        name: 'FlashDB (Redis)',
+        image: 'https://www.svgrepo.com/show/303460/redis-logo.svg',
+        video: '',
+        href: 'https://github.com/iranzithierry/redis-alternative',
+        links: [
+            {
+                type: "Source",
+                href: "https://github.com/iranzithierry/redis-alternative",
+                icon: GitHubLogoIcon,
+            },
+        ],
+        dates: "January 2025 - Present",
+        active: true,
+        tags: ['Rust', 'Javascript'],
+        description:
+            'A lightweight Redis-like key-value database built in Rust with it's own JS client with 0 dependency.',
+    },
+    {
         name: 'Movo+',
         image: '/images/projects/movo+.svg',
         video: '',
