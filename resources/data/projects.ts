@@ -17,9 +17,27 @@ export const projects = [
         ],
         dates: "October 2024 - Present",
         active: true,
-        tags: ['Next.JS', 'FastAPI', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres', 'pgVector', 'Appwrite'],
+        tags: ['Next.JS', 'FastAPI','Tailwindcss', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres', 'pgVector', 'Appwrite'],
         description:
             'Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.',
+    },
+    {
+        name: 'Prostack',
+        image: 'https://ph-files.imgix.net/b48c97b8-7bc5-45ed-aecb-b0f21af10d4f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=56&h=56&fit=crop&frame=1&dpr=1',
+        video: '',
+        href: 'https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.vercel.app/projects',
+        links: [
+            {
+                type: "Website",
+                href: "https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.vercel.app/projects",
+                icon: Globe,
+            },
+        ],
+        dates: "February 5 2025 - February 8 2025",
+        active: true,
+        tags: ['Next.JS', 'Better Auth', 'Prisma', 'Resend', 'Neon Postgres', 'Lemonsqueezy'],
+        description:
+            'ProStack is a complete Next.js 15 starter kit for building saas apps fast! It comes with production-ready authentication, billing, team and more all wrapped in a fast, secure and responsive design. Plus, it\'s super easy to customize with just two config files.',
     },
     {
         name: 'FlashDB (Redis)',
