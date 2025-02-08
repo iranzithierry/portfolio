@@ -3,33 +3,16 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'lh3.googleusercontent.com',
-                port: '',
-                pathname: '**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'tailwindui.com',
-                port: '',
-                pathname: '**',
-            },
-            {
-                protocol: 'http',
-                hostname: '127.0.0.1',
-                port: '',
-                pathname: '**',
-            },
-            {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '8000',
-                pathname: '**',
-            }
-        ],
-    },
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "**",
+				port: "",
+				pathname: "**",
+			},
+		],
+		dangerouslyAllowSVG: true,
+	},
     async redirects() {
         return [
             {
