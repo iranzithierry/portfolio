@@ -206,7 +206,7 @@ export function useSnakeGame(onGameOver: (score: number) => void) {
     
     // If game not started yet, show starting message
     if (!gameState.current.direction) {
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+      ctx.fillStyle = '#4CAF50';
       ctx.font = '16px Arial';
       ctx.fillText('Press an arrow key to start', canvas.width / 2 - 100, canvas.height / 2);
       return;
