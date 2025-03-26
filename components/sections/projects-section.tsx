@@ -20,14 +20,23 @@ export default function ProjectsSection() {
                                 className="h-full object-fill rounded-full bg-white p-1"
                             />
                         </div>
-                        <h2 className="mt-6 text-base font-semibold text-fg">
+                        <h2 className="mt-6 text-base font-semibold text-fg flex justify-between items-center w-full">
                             <a target="_blank" rel="noreferrer noopener" href={project.href}>
                                 {project.name}
                             </a>
+                        {project.acquired && (
+                            <Badge
+                                className="ml-auto text-xs ring-1 ring-inset ring-success/20 bg-success/10 px-1.5 py-0.5 rounded-full"
+                                intent="success"
+                            >
+                                Acquired
+                            </Badge>
+                        )}
                         </h2>
                         <p className="relative line-clamp-5 z-10 mt-2 text-sm text-muted-fg transition-all ease-in-out duration-100">
                             {project.description}
                         </p>
+                        
                         {project.tags && project.tags.length > 0 && (
                             <div className="mt-2 flex flex-wrap gap-1">
                                 {project.tags?.map((tag) => (
