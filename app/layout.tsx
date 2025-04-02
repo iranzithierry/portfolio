@@ -4,12 +4,14 @@ import { cn } from "@/lib/utils";
 import { Suspense } from "react";
 import Header from "@/components/header";
 import type { Metadata, Viewport } from "next";
-import { fontSans } from "@/lib/fonts";;
+import { fontSans } from "@/lib/fonts";
 import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
 import GamePanel from "@/components/game-panel";
+import dynamic from "next/dynamic";
+
 export const metadata: Metadata = {
   title: {
     default: "Iranzi Thierry",
@@ -31,6 +33,7 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const LazyGamePanel = dynamic(() => import("@/components/game-panel"), { ssr: false });
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("bg-bg font-sans antialiased", fontSans.variable)}>
@@ -46,7 +49,9 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               <Container>
                 {children}
                 <Footer />
-                <GamePanel />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <LazyGamePanel />
+                </Suspense>
               </Container>
             </ThemeProvider>
           </GlobalProvider>

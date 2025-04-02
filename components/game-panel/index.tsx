@@ -7,7 +7,6 @@ import { PlaySection } from "./sections/play";
 import { LeaderboardSection } from "./sections/leaderboard";
 import { AuthSection } from "./sections/auth";
 import { GameOverlay } from "./game-overlay";
-import styles from "./index.module.css";
 
 export default function GamePanel() {
   const { leaderboard, isLoading, saveScore } = useLeaderboard();
@@ -37,10 +36,6 @@ export default function GamePanel() {
 
     return () => clearTimeout(timeoutId);
   }, [initGame, gameOver]);
-
-  const handlePlayClick = () => {
-    initGame();
-  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mt-12">
