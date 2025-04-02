@@ -14,15 +14,15 @@ export default function Page() {
             <div className="md:w-[75%] space-y-6 ">
                 <h1 className='text-5xl font-bold'>My resume</h1>
                 <div>
-                    <h3 className="text-fg text-2xl font-semibold">Education</h3>
-                    <div className="py-5">
-                        <EducationSection />
-                    </div>
-                </div>
-                <div>
                     <h3 className="text-fg text-2xl font-semibold">Work Experience</h3>
                     <div className="py-5">
                         <ExperienceSection />
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-fg text-2xl font-semibold">Education</h3>
+                    <div className="py-5">
+                        <EducationSection />
                     </div>
                 </div>
             </div>
