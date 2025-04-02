@@ -8,11 +8,11 @@ export const projects = [
         image: '/images/projects/cognova-ai.png',
         acquired: true,
         video: '',
-        href: 'https://cognova.io?ref=portfolio&from=https://iranzi.vercel.app/projects',
+        href: 'https://cognova.io?ref=portfolio&from=https://iranzi.dev/projects',
         links: [
             {
                 type: "Website",
-                href: "https://cognova.io?ref=portfolio&from=https://iranzi.vercel.app/projects",
+                href: "https://cognova.io?ref=portfolio&from=https://iranzi.dev/projects",
                 icon: Globe,
             },
         ],
@@ -26,11 +26,11 @@ export const projects = [
         name: 'Prostack',
         image: 'https://ph-files.imgix.net/b48c97b8-7bc5-45ed-aecb-b0f21af10d4f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=56&h=56&fit=crop&frame=1&dpr=1',
         video: '',
-        href: 'https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.vercel.app/projects',
+        href: 'https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.dev/projects',
         links: [
             {
                 type: "Website",
-                href: "https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.vercel.app/projects",
+                href: "https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.dev/projects",
                 icon: Globe,
             },
         ],
