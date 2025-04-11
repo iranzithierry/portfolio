@@ -18,7 +18,7 @@ export const projects = [
         ],
         dates: "October 2024 - Present",
         active: true,
-        tags: ['Next.JS', 'FastAPI','Tailwindcss', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres', 'pgVector', 'Appwrite'],
+        tags: ['Next.JS', 'Python','Tailwindcss', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres', 'pgVector', 'Appwrite'],
         description:
             'Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.',
     },
@@ -142,9 +142,9 @@ export const projects = [
         href: 'https://e-sound.onrender.com/',
         links: [
             {
-                type: "Website",
-                href: "https://e-sound.onrender.com/",
-                icon: Globe,
+                type: "Source",
+                href: "https://github.com/iranzithierry/e-sound",
+                icon: GitHubLogoIcon,
             },
         ],
         dates: "",
