@@ -49,9 +49,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               <Container>
                 {children}
                 <Footer />
-                <Suspense fallback={<div>Loading...</div>}>
-                  <LazyGamePanel />
-                </Suspense>
+                <div className="hidden sm:block">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <LazyGamePanel />
+                  </Suspense>
+                </div>
               </Container>
             </ThemeProvider>
           </GlobalProvider>
