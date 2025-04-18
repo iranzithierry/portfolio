@@ -18,19 +18,19 @@ export const projects = [
         ],
         dates: "October 2024 - Present",
         active: true,
-        tags: ['Next.JS', 'FastAPI','Tailwindcss', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres', 'pgVector', 'Appwrite'],
+        tags: ['Next.JS', 'Python','Tailwindcss', 'Prisma', 'Cloudflare AI Worker', 'Neon Postgres', 'pgVector', 'Appwrite'],
         description:
             'Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.',
     },
     {
         name: 'Prostack',
-        image: 'https://ph-files.imgix.net/b48c97b8-7bc5-45ed-aecb-b0f21af10d4f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=56&h=56&fit=crop&frame=1&dpr=1',
+        image: 'https://ueuyztalzbxumzeowndw.supabase.co/storage/v1/object/sign/pictures/prostack.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwaWN0dXJlcy9wcm9zdGFjay5wbmciLCJpYXQiOjE3NDQyODExMTMsImV4cCI6MTc3NTgxNzExM30.rOnoKsG6Xyr_4VFfael-lGUGl2gWiQdMwgL0WEwmTJA',
         video: '',
-        href: 'https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.dev/projects',
+        href: 'https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects',
         links: [
             {
                 type: "Website",
-                href: "https://pro-stack.vercel.app?ref=portfolio&from=https://iranzi.dev/projects",
+                href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
                 icon: Globe,
             },
         ],
@@ -142,9 +142,9 @@ export const projects = [
         href: 'https://e-sound.onrender.com/',
         links: [
             {
-                type: "Website",
-                href: "https://e-sound.onrender.com/",
-                icon: Globe,
+                type: "Source",
+                href: "https://github.com/iranzithierry/e-sound",
+                icon: GitHubLogoIcon,
             },
         ],
         dates: "",
