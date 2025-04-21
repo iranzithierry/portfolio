@@ -6,7 +6,6 @@ export const metadata: Metadata = {
     title: "Article",
 }
 
-export const dynamic = "force-dynamic"
 export default function Page() {
     return (
         <div className='space-y-3 sm:space-y-6'>
