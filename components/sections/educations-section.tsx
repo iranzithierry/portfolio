@@ -14,7 +14,7 @@ export default function EducationSection() {
     const educationData = [
         {
             startYear: "Jan 2023",
-            endYear: "Present",
+            endYear: "July 2025",
             degree: "Advanced Level in Software Development",
             institution: "College George Fox",
             description: "Focused on advanced topics in software development, including programming languages, software design, and project management. Gained hands-on experience building software projects and collaborating on team-based assignments, emphasizing practical skills and industry relevance.",

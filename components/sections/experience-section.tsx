@@ -28,6 +28,16 @@ export default function ExperienceSection() {
             endYear: '2024',
             site: "Kigali - Rwanda",
         },
+        {
+            companyName: 'Freelancer',
+            companyImageSrc: '/images/companies/freelancer.png',
+            companyRole: 'Fullstack Developer',
+            roleDescription: "Collaborated with various clients on diverse projects through platforms like Discord, LinkedIn, and Twitter, delivering fullstack solutions tailored to their needs.",
+            startYear: '2020',
+            endYear: '2024',
+            site: "Kigali - Rwanda",
+        }
+        
     ];
     
     

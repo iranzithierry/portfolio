@@ -9,7 +9,6 @@ import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
-import GamePanel from "@/components/game-panel";
 import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
@@ -17,11 +16,10 @@ export const metadata: Metadata = {
     default: "Iranzi Thierry",
     template: `%s | Software Engineer`,
   },
-  description:
-    "Iranzi Thierry a software engineer with over five years of experience. I specialize in developing robust and scalable solutions.",
+  description: "Iranzi Thierry a software engineer",
   keywords: "iranzi thierry, thierry, iranzi, iranzithierry, thierry iranzi, thierryiranzi",
   icons: {
-    icon: "/images/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 export const viewport: Viewport = {
