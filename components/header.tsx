@@ -16,16 +16,16 @@ export const menus = [
         link: '/about'
     },
     {
-        title: 'Articles',
-        link: '/articles'
-    },
-    {
         title: 'Projects',
         link: '/projects'
     },
     {
         title: 'Resume',
         link: '/resume'
+    },
+    {
+        title: 'Articles',
+        link: '/articles'
     },
 ]
 export default function Header() {

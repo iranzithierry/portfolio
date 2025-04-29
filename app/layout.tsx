@@ -14,7 +14,7 @@ import dynamic from "next/dynamic";
 export const metadata: Metadata = {
   title: {
     default: "Iranzi Thierry",
-    template: `%s | Software Engineer`,
+    template: `%s | Iranzi Thierry`,
   },
   description: "Iranzi Thierry a software engineer",
   keywords: "iranzi thierry, thierry, iranzi, iranzithierry, thierry iranzi, thierryiranzi",
