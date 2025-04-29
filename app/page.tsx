@@ -33,8 +33,8 @@ export default function Page() {
         <AboutSection />
         <SocialIcons />
       </div>
-      <div>
-        <h1 className="text-2xl sm:text-3xl font-semibold">Latest projects</h1>
+      <div className="mt-6">
+        <h1 className="text-2xl font-semibold">Latest projects</h1>
         <ProjectsSection />
         <p className="font-medium text-sm mt-3">
           See a list of all my projects On my{" "}
