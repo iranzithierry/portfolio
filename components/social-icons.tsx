@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import React from 'react'
 
 const socials = [
@@ -28,32 +29,32 @@ const socials = [
                 </svg>
         )
     },
-    // {
-    //     name: 'Mail',
-    //     href: 'mailto:iranzithierry12@gmail.com',
-    //     icon: (props: any) => (
-    //         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-    //             <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-    //         </svg>
-    //     ),
-    // },
-    // {
-    //     name: 'LinkedIn',
-    //     href: 'https://www.linkedin.com/in/iranzi-thierry-083029279/',
-    //     icon: (props: any) => (
-    //         <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6 -mt-2" aria-hidden="true">
-    //              <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-    //         </svg>
-    //     ),
-    // }
+    {
+        name: 'Mail',
+        href: 'mailto:iranzithierry12@gmail.com',
+        icon: (props: any) => (
+            <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+            </svg>
+        ),
+    },
+    {
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/iranzi-thierry-083029279/',
+        icon: (props: any) => (
+            <svg fill="currentColor" viewBox="0 0 24 24" {...props} className={cn("-mt-1", props.className)}>
+                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+            </svg>
+        ),
+    }
 ];
 export default function SocialIcons() {
     return (
-        <div className="flex space-x-6 mt-5 items-center">
+        <div className="flex space-x-4 mt-5 items-center">
             {socials.map((item) => (
                 <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                     <span className="sr-only">{item.name}</span>
-                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                    <item.icon className="h-5 w-5" aria-hidden="true" />
                 </a>
             ))}
         </div>

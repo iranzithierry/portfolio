@@ -13,6 +13,13 @@ export default function Page() {
         <div className='flex flex-col md:flex-row gap-4'>
             <div className="md:w-[75%] space-y-6 ">
                 <h1 className='text-5xl font-bold'>My resume</h1>
+                <p className="text-sm text-gray-600 dark:text-neutral-400">
+                    This page gives you a quick overview of my professional background, from my work experience and education history to the technical skills and tools I use daily.
+                    <br/>
+                    <br/>
+                    It&apos;s everything you&apos;d want to know about how I work and what I bring to the table.
+                </p>
+
                 <div>
                     <h3 className="text-fg text-2xl font-semibold">Work Experience</h3>
                     <div className="py-5">

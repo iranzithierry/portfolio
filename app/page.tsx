@@ -33,8 +33,8 @@ export default function Page() {
         <AboutSection />
         <SocialIcons />
       </div>
-      <div className="mt-6">
-        <h1 className="text-2xl font-semibold">Latest projects</h1>
+      {/* <div className="mt-6">
+        <h1 className="text-2xl font-semibold text-gray-800 dark:text-neutral-200">Projects</h1>
         <ProjectsSection />
         <p className="font-medium text-sm mt-3">
           See a list of all my projects On my{" "}
@@ -46,16 +46,16 @@ export default function Page() {
       <div className="grid lg:grid-cols-5 gap-4 lg:gap-12 items-stretch">
         <main className="flex-1 lg:col-span-3">
           <div className="my-10 sm:my-14">
-            <h2 className="mb-5 text-2xl sm:text-3xl font-semibold text-fg">Latest Articles</h2>
+            <h2 className="mb-5 text-2xl font-semibold text-gray-800 dark:text-neutral-200">Latest Articles</h2>
             <Suspense fallback={<ArticlesSectionLoadingSkeleton />}>
               <ArticlesSection />
             </Suspense>
           </div>
         </main>
-        {/* <aside className="lg:col-span-2 flex flex-col-reverse lg:block overflow-y-auto lg:space-y-4">
+        <aside className="lg:col-span-2 flex flex-col-reverse lg:block overflow-y-auto lg:space-y-4">
           SOMETHING
-        </aside> */}
-      </div>
+        </aside>
+      </div> */}
     </>
   );
 }

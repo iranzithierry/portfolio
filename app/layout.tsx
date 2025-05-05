@@ -9,7 +9,7 @@ import { GlobalProvider } from "@/contexts/global-context";
 import { ThemeProvider } from "@/components/providers";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const LazyGamePanel = dynamic(() => import("@/components/game-panel"), { ssr: false });
+  // const LazyGamePanel = dynamic(() => import("@/components/game-panel"), { ssr: false });
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("bg-bg font-sans antialiased", fontSans.variable)}>
@@ -47,11 +47,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               <Container>
                 {children}
                 <Footer />
-                <div className="hidden sm:block">
+                {/* <div className="hidden sm:block">
                   <Suspense fallback={<div>Loading...</div>}>
                     <LazyGamePanel />
                   </Suspense>
-                </div>
+                </div> */}
               </Container>
             </ThemeProvider>
           </GlobalProvider>

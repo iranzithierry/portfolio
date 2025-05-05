@@ -8,9 +8,6 @@
 
 /* Theme Variables */
 @theme {
-    /* Font */
-    --font-display: var(--font-display), "ui-monospace", "SFMono-Regular", "-apple-system";
-
     /* Core Colors */
     --color-bg: var(--bg);
     --color-fg: var(--fg);
@@ -63,14 +60,14 @@
         --fg: oklch(0.141 0.005 285.823);
         --border: oklch(0.92 0.004 286.32);
         --input: oklch(0.871 0.006 286.286);
-        --ring: oklch(0.546 0.245 262.881);
+        --ring: oklch(0.21 0.006 285.885);
 
         /* Semantic Colors */
-        --primary: oklch(0.546 0.245 262.881);
+        --primary: oklch(0.21 0.006 285.885);
         --primary-fg: oklch(1 0 0);
         --secondary: oklch(0.92 0.004 286.32);
         --secondary-fg: oklch(0.141 0.005 285.823);
-        --accent: oklch(0.546 0.245 262.881);
+        --accent: oklch(0.21 0.006 285.885);
         --accent-fg: oklch(1 0 0);
 
         /* UI Colors */
@@ -92,7 +89,7 @@
         --danger-fg: oklch(0.971 0.013 17.38);
 
         /* Chart Colors */
-        --chart-1: oklch(0.546 0.245 262.881);
+        --chart-1: oklch(0.21 0.006 285.885);
         --chart-2: oklch(0.707 0.165 254.624);
         --chart-3: oklch(0.809 0.105 251.813);
         --chart-4: oklch(0.882 0.059 254.128);
@@ -122,20 +119,20 @@
         /* Core Colors */
         --bg: oklch(0.141 0.005 285.823);
         --fg: oklch(0.985 0 0);
-        --border: oklch(0.274 0.006 286.033);
-        --input: oklch(0.274 0.006 286.033);
-        --ring: oklch(0.546 0.245 262.881);
+        --border: oklch(1 0 0 / 10%);
+        --input: oklch(1 0 0 / 10%);
+        --ring: oklch(0.552 0.016 285.938);
 
         /* Semantic Colors */
-        --primary: oklch(0.546 0.245 262.881);
-        --primary-fg: oklch(1 0 0);
+        --primary: oklch(0.92 0.004 286.32);
+        --primary-fg: oklch(0.21 0.006 285.885);
         --secondary: oklch(0.234 0.006 286.033);
         --secondary-fg: oklch(0.985 0 0);
-        --accent: oklch(0.546 0.245 262.881);
+        --accent: oklch(0.552 0.016 285.938);
         --accent-fg: oklch(1 0 0);
 
         /* UI Colors */
-        --muted: oklch(0.21 0.006 285.885);
+        --muted: oklch(0.274 0.006 286.033);
         --muted-fg: oklch(0.705 0.015 286.067);
         --overlay: oklch(0.17 0.006 285.885);
         --overlay-fg: oklch(0.985 0 0);

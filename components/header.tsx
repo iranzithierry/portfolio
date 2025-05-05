@@ -12,10 +12,6 @@ export const menus = [
         link: '/'
     },
     {
-        title: 'About',
-        link: '/about'
-    },
-    {
         title: 'Projects',
         link: '/projects'
     },
@@ -33,7 +29,7 @@ export default function Header() {
     const pathName = usePathname()
     return (
         <header className="fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-            <nav className={`mt-4 relative max-w-2xl ${pathName == '/' ? 'w-full md:w-fit' : 'w-full'} bg-white border shadow-md border-gray-200 rounded-[2rem] mx-2 py-1 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-zinc-800 dark:border-neutral-700`}>
+            <nav className={`mt-4 relative max-w-xl ${pathName == '/' ? 'w-full md:w-fit' : 'w-full'} bg-white border shadow-md border-gray-200 rounded-[2rem] mx-2 py-1 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-zinc-800 dark:border-neutral-700`}>
                 <div className="px-4 md:px-0 flex justify-between items-center">
                     <div className={`${pathName == '/' && 'block  md:hidden'}`}>
                         <Link className={cn(mobileMenuOpened ? "-ml-2 mt-1" : "-ml-3", "flex items-center overflow-hidden h-fit rounded-[2rem]")} href="/" aria-label="Iranzi Thierry Avatar">

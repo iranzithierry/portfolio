@@ -8,7 +8,7 @@ export default function ProjectsSection() {
   return (
     <ul
       role="list"
-      className="grid grid-cols-1 gap-x-12 pt-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+      className="grid grid-cols-1 gap-x-12 pt-8 gap-y-16 sm:grid-cols-2">
       {projects.map((project, index) => {
         return (
           <li key={index} className="relative flex flex-col items-start">
@@ -22,12 +22,12 @@ export default function ProjectsSection() {
                 rel="noreferrer noopener"
                 href={project.href}>
                 <Image
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   decoding="async"
                   src={project.image}
                   alt={`${project.name} Logo`}
-                  className="h-full object-fill rounded-full bg-white p-1"
+                  className="h-12 w-12 object-fill rounded-full bg-white p-1"
                 />
               </a>
             </div>
