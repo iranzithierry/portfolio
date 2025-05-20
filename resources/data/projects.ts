@@ -33,7 +33,6 @@ export const projects = [
   {
     name: "Rewrite AI",
     image: "/images/projects/rewrite-ai.png",
-    acquired: true,
     video: "",
     href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
     links: [
@@ -97,7 +96,6 @@ export const projects = [
   {
     name: "Dashkombat",
     image: "/images/projects/placeholder.png",
-    acquired: true,
     video: "",
     href: "https://dashkombat.vercel.app/?ref=portfolio&from=https://iranzi.dev/projects",
     links: [
@@ -152,7 +150,6 @@ export const projects = [
   {
     name: "Photogen",
     image: "/images/projects/placeholder.png",
-    acquired: true,
     video: "",
     href: "https://photogen.vercel.app/?ref=portfolio&from=https://iranzi.dev/projects",
     links: [
