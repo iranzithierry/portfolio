@@ -59,7 +59,7 @@ export default function ProjectsSection() {
               </div>
             )}
             {project.links && project.links.length > 0 && (
-              <div className="flex justify-between flex-row flex-wrap items-end gap-1 mt-4">
+              <div className="flex justify-between  w-full flex-row flex-wrap items-end gap-1 mt-4">
                 {project.links?.map((link, idx) => {
                   const Icon = link.icon;
                   return (
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
                     </Link>
                   );
                 })}
-                <span className="relative ml-auto text-end  z-10 text-xs text-muted-fg">{project.dates}</span>
+                <span className="relative mr-auto text-end  z-10 text-xs text-muted-fg">{project.dates}</span>
               </div>
             )}
           </li>
