@@ -59,7 +59,7 @@ export default function ProjectsSection() {
               </div>
             )}
             {project.links && project.links.length > 0 && (
-              <div className="flex flex-row flex-wrap items-center w-full gap-1 mt-4">
+              <div className="flex flex-row items-center w-full gap-1 mt-4">
                 {project.links?.map((link, idx) => {
                   const Icon = link.icon;
                   return (
