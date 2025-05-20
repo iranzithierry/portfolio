@@ -15,7 +15,7 @@ export const projects = [
         icon: Globe,
       },
     ],
-    dates: "October 2024 - Present",
+    dates: "October 2024 - March 2025",
     active: true,
     tags: [
       "Next.JS",
@@ -87,7 +87,7 @@ export const projects = [
         icon: GitHubLogoIcon,
       },
     ],
-    dates: "January 2025 - Present",
+    dates: "January 2025 - January 2025",
     active: true,
     tags: ["Rust", "Javascript"],
     description:
@@ -141,7 +141,7 @@ export const projects = [
         icon: Globe,
       },
     ],
-    dates: "Sept 2024 - Present",
+    dates: "Sept 2024 - October 2024",
     active: true,
     tags: ["Next.JS", "Prisma", "Tailwindcss", "Shadcn UI", "Typescript", "Redis", "Postgresql"],
     description:

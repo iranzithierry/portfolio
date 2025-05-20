@@ -6,9 +6,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function ProjectsSection() {
   return (
-    <ul
-      role="list"
-      className="grid grid-cols-1 gap-x-12 pt-8 gap-y-16 sm:grid-cols-2">
+    <ul role="list" className="grid grid-cols-1 gap-x-12 pt-8 gap-y-16 sm:grid-cols-2">
       {projects.map((project, index) => {
         return (
           <li key={index} className="relative flex flex-col items-start">
@@ -52,7 +50,7 @@ export default function ProjectsSection() {
             </p>
 
             {project.tags && project.tags.length > 0 && (
-              <div className="mt-2 flex flex-wrap gap-1">
+              <div className="mt-2 flex  flex-wrap gap-1">
                 {project.tags?.map((tag) => (
                   <Badge className="px-1.5 py-0 text-[10px]" intent="secondary" key={tag}>
                     {tag}
@@ -61,7 +59,7 @@ export default function ProjectsSection() {
               </div>
             )}
             {project.links && project.links.length > 0 && (
-              <div className="flex flex-row flex-wrap items-start gap-1 mt-4">
+              <div className="flex justify-between flex-row flex-wrap items-start gap-1 mt-4">
                 {project.links?.map((link, idx) => {
                   const Icon = link.icon;
                   return (
@@ -75,6 +73,7 @@ export default function ProjectsSection() {
                     </Link>
                   );
                 })}
+                <span className="relative  z-10 text-xs text-muted-fg">{project.dates}</span>
               </div>
             )}
           </li>
