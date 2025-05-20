@@ -35,7 +35,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("bg-bg font-sans antialiased", fontSans.variable)}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense>
           <GlobalProvider>
             <ThemeProvider
               attribute="class"
