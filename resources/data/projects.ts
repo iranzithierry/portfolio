@@ -3,6 +3,43 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const projects = [
   {
+    name: "Excal AI",
+    image: "/images/projects/excal-ai.png",
+    video: "",
+    href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
+    links: [
+      {
+        type: "Website",
+        href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
+        icon: Globe,
+      },
+    ],
+    dates: "June 2025 - Present",
+    active: true,
+    tags: ["Next.JS", "Polar", "Tailwindcss", "Prisma", "Neon Postgres"],
+    description:
+      "Excal AI is an AI Editor (Microsoft Excel ) that write and automatically update your content, analyze and explain complex data, apply formulas, and guide users through critical actions. It also supports seamless import and export of Excel files, making it easy to work with structured data across platforms.",
+  },
+  {
+    name: "Prostack",
+    image: "/images/projects/prostack.png",
+
+    video: "",
+    href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+    links: [
+      {
+        type: "Website",
+        href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+        icon: Globe,
+      },
+    ],
+    dates: "February 5 2025 - February 8 2025",
+    active: true,
+    tags: ["Next.JS", "Better Auth", "Prisma", "Resend", "Neon Postgres", "Lemonsqueezy"],
+    description:
+      "ProStack is a complete Next.js 15 starter kit for building saas apps fast! It comes with production-ready authentication, billing, team and more all wrapped in a fast, secure and responsive design. Plus, it's super easy to customize with just two config files.",
+  },
+  {
     name: "Cognova AI",
     image: "/images/projects/cognova-ai.png",
     acquired: true,
@@ -29,44 +66,6 @@ export const projects = [
     ],
     description:
       "Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.",
-  },
-  {
-    name: "Excal AI",
-    image: "/images/projects/excal-ai.png",
-    acquired: true,
-    video: "",
-    href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
-    links: [
-      {
-        type: "Website",
-        href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
-        icon: Globe,
-      },
-    ],
-    dates: "June 2025 - Present",
-    active: true,
-    tags: ["Next.JS", "Polar", "Tailwindcss", "Prisma", "Neon Postgres"],
-    description:
-      "Excal AI is an AI Editor (Microsoft Excel ) that write and automatically update your content, analyze and explain complex data, apply formulas, and guide users through critical actions. It also supports seamless import and export of Excel files, making it easy to work with structured data across platforms.",
-  },
-  {
-    name: "Prostack",
-    image:
-      "https://ueuyztalzbxumzeowndw.supabase.co/storage/v1/object/sign/pictures/prostack.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwaWN0dXJlcy9wcm9zdGFjay5wbmciLCJpYXQiOjE3NDQyODExMTMsImV4cCI6MTc3NTgxNzExM30.rOnoKsG6Xyr_4VFfael-lGUGl2gWiQdMwgL0WEwmTJA",
-    video: "",
-    href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
-    links: [
-      {
-        type: "Website",
-        href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
-        icon: Globe,
-      },
-    ],
-    dates: "February 5 2025 - February 8 2025",
-    active: true,
-    tags: ["Next.JS", "Better Auth", "Prisma", "Resend", "Neon Postgres", "Lemonsqueezy"],
-    description:
-      "ProStack is a complete Next.js 15 starter kit for building saas apps fast! It comes with production-ready authentication, billing, team and more all wrapped in a fast, secure and responsive design. Plus, it's super easy to customize with just two config files.",
   },
   {
     name: "FlashDB (Redis)",
