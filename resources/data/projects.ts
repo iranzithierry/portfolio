@@ -31,30 +31,23 @@ export const projects = [
       "Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.",
   },
   {
-    name: "Rewrite AI",
-    image: "/images/projects/rewrite-ai.png",
+    name: "Excal AI",
+    image: "/images/projects/excal-ai.png",
+    acquired: true,
     video: "",
-    href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+    href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
     links: [
       {
         type: "Website",
-        href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+        href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
         icon: Globe,
       },
     ],
-    dates: "May 12 2025 - May 14 2025",
+    dates: "June 2025 - Present",
     active: true,
-    tags: [
-      "Next.JS",
-      "Tailwindcss",
-      "Prisma",
-      "Better-Auth",
-      "Neon Postgres",
-      "TailArk",
-      "Shadcn UI",
-    ],
+    tags: ["Next.JS", "Polar", "Tailwindcss", "Prisma", "Neon Postgres"],
     description:
-      "Rewrite AI is this dope ML-powered app that takes AI posts, boring emails, DMs, or even viral stuff and flips it into your own vibe. Wanna make it sound Gen Z? Just snag any celeb content, paste it in, and boom, you're set! 🔥💬",
+      "Excal AI is an AI Editor (Microsoft Excel ) that write and automatically update your content, analyze and explain complex data, apply formulas, and guide users through critical actions. It also supports seamless import and export of Excel files, making it easy to work with structured data across platforms.",
   },
   {
     name: "Prostack",
@@ -92,6 +85,32 @@ export const projects = [
     tags: ["Rust", "Javascript"],
     description:
       "A lightweight Redis-like key-value database built in Rust with it's own JS client with 0 dependency.",
+  },
+  {
+    name: "Rewrite AI",
+    image: "/images/projects/rewrite-ai.png",
+    video: "",
+    href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+    links: [
+      {
+        type: "Website",
+        href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+        icon: Globe,
+      },
+    ],
+    dates: "May 12 2025 - May 14 2025",
+    active: true,
+    tags: [
+      "Next.JS",
+      "Tailwindcss",
+      "Prisma",
+      "Better-Auth",
+      "Neon Postgres",
+      "TailArk",
+      "Shadcn UI",
+    ],
+    description:
+      "Rewrite AI is this dope ML-powered app that takes AI posts, boring emails, DMs, or even viral stuff and flips it into your own vibe. Wanna make it sound Gen Z? Just snag any celeb content, paste it in, and boom, you're set! 🔥💬",
   },
   {
     name: "Dashkombat",
