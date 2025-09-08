@@ -16,28 +16,26 @@ export const projects = [
     ],
     dates: "June 2025 - Present",
     active: true,
-    tags: ["Next.JS", "Polar", "Tailwindcss", "Prisma", "Neon Postgres"],
+    tags: ["Next.JS","tRPC", "Better Auth", "Shadcn UI", "Polar", "Tailwindcss", "Prisma", "Neon Postgres"],
     description:
-      "Excal AI is an AI Editor (Microsoft Excel ) that write and automatically update your content, analyze and explain complex data, apply formulas, and guide users through critical actions. It also supports seamless import and export of Excel files, making it easy to work with structured data across platforms.",
+      "Excal AI is an AI-Powered (Microsoft Excel ) that write and automatically update your content, analyze and explain complex data, apply formulas, and guide users through critical actions. It also supports seamless import and export of Excel files, making it easy to work with structured data across platforms.",
   },
   {
-    name: "Prostack",
-    image: "/images/projects/prostack.png",
-
-    video: "",
-    href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+    name: "Clue",
+    image: "/images/projects/clue.svg",
+    href: "https://clue.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
     links: [
       {
         type: "Website",
-        href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+        href: "https://clue.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
         icon: Globe,
       },
     ],
-    dates: "February 5 2025 - February 8 2025",
+    dates: "September 05 - September 07, 2025",
     active: true,
-    tags: ["Next.JS", "Better Auth", "Prisma", "Resend", "Neon Postgres", "Lemonsqueezy"],
+    tags: ["Next.JS", "Express", "Better Auth", "tRPC", "Shadcn UI", "Tailwindcss", "Prisma", "Neon Postgres"],
     description:
-      "ProStack is a complete Next.js 15 starter kit for building saas apps fast! It comes with production-ready authentication, billing, team and more all wrapped in a fast, secure and responsive design. Plus, it's super easy to customize with just two config files.",
+      "Clue is an app that helps you save data, especially variables or environment variables like API keys, passwords, and notes such as code blocks, snippets, templates, all within a contained web text editor. The idea came from my experience as a developer, where I sometimes forget testing project environments or useful debug snippets for problems I encounter often or might face in the future.",
   },
   {
     name: "Cognova AI",
@@ -66,6 +64,25 @@ export const projects = [
     ],
     description:
       "Cognova AI is an AI-driven chat platform that helps businesses provide instant responses to customer inquiries across various channels, such as websites and WhatsApp. It learns from business documents and data to deliver accurate and relevant information, while also offering advanced analytics and knowledge base management.",
+  },
+  {
+    name: "Prostack",
+    image: "/images/projects/prostack.png",
+
+    video: "",
+    href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+    links: [
+      {
+        type: "Website",
+        href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+        icon: Globe,
+      },
+    ],
+    dates: "February 5 2025 - February 8 2025",
+    active: true,
+    tags: ["Next.JS", "Better Auth", "Prisma", "Resend", "Neon Postgres", "Lemonsqueezy"],
+    description:
+      "ProStack is a complete Next.js 15 starter kit for building saas apps fast! It comes with production-ready authentication, billing, team and more all wrapped in a fast, secure and responsive design. Plus, it's super easy to customize with just two config files.",
   },
   {
     name: "FlashDB (Redis)",
