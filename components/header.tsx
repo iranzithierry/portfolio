@@ -19,10 +19,10 @@ export const menus = [
         title: 'Resume',
         link: '/resume'
     },
-    {
-        title: 'Articles',
-        link: '/articles'
-    },
+    // {
+    //     title: 'Articles',
+    //     link: '/articles'
+    // },
 ]
 export default function Header() {
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false)

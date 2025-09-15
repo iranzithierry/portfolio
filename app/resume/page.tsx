@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 }
 export default function Page() {
     return (
-        <div className='flex flex-col md:flex-row gap-4'>
-            <div className="md:w-[75%] space-y-6 ">
+        <div className='flex flex-col gap-4'>
                 <h1 className='text-5xl font-bold'>My resume</h1>
                 <p className="text-sm text-gray-600 dark:text-neutral-400">
                     This page gives you a quick overview of my professional background, from my work experience and education history to the technical skills and tools I use daily.
@@ -32,12 +31,6 @@ export default function Page() {
                         <EducationSection />
                     </div>
                 </div>
-            </div>
-            <div className="md:w-[25%] space-y-5">
-                <SkillsSection />
-                <ToolsSection />
-                <LanguageSection />
-            </div>
         </div>
     )
 }

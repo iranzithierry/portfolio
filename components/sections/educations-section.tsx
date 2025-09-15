@@ -36,9 +36,9 @@ export default function EducationSection() {
                         <TimelineConnector />
                     )}
                     <TimelineHeader>
-                        <div className={cn(idx == 0 ? "bg-primary border-primary" : "bg-secondary border-secondary", "-ml-5 -mt-5 grow-0 shrink-0 rounded-full h-14 w-14 border z-10 p-1 overflow-hidden flex items-center")}>
+                        <div className={cn(idx == 0 ? "bg-info border-info" : "bg-secondary border-secondary", "-ml-5 -mt-5 grow-0 shrink-0 rounded-full h-14 w-14 border z-10 p-1 overflow-hidden flex items-center")}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <AcademicCapIcon className="h-full object-cover rounded-full bg-white text-primary p-1" />
+                            <AcademicCapIcon className="h-full object-cover rounded-full bg-white text-info p-1" />
                         </div>
                         <div className="space-y-1 pb-2">
                             <span className="text-muted-fg font-semibold space-x-1 text-xs">

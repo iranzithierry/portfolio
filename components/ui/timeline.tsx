@@ -28,7 +28,7 @@ const TimelineConnector = React.forwardRef<
 	<div
 		ref={ref}
 		className={cn(
-			"absolute top-[5px] left-[30px] -translate-x-1/2 translate-y-2 h-full w-px bg-primary",
+			"absolute top-[5px] left-[30px] -translate-x-1/2 translate-y-2 h-full w-px bg-info",
 			className,
 		)}
 		{...props}
