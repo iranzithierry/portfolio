@@ -1,16 +1,19 @@
 import { Globe } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
+const encodeUrl = (url: string) => {
+	return `${url}?ref=portfolio&utm_source=iranzi.dev`
+};
 export const projects = [
 	{
 		name: "Excal AI",
 		image: "/images/projects/excal-ai.png",
 		video: "",
-		href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://excalai.com"),
 		links: [
 			{
 				type: "Website",
-				href: "https://excalai.com?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://excalai.com"),
 				icon: Globe,
 			},
 		],
@@ -33,26 +36,26 @@ export const projects = [
 		name: "Transcribe",
 		image: "/images/projects/transcribe.png",
 		video: "",
-		href: "https://transcribe.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://transcribe.iranzi.dev"),
 		links: [
 			{
 				type: "Website",
-				href: "https://transcribe.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://transcribe.iranzi.dev"),
 				icon: Globe,
 			},
 		],
 		dates: "Single Day Project",
 		active: true,
 		tags: [
-      "Python",
+			"Python",
 			"Next.JS",
-      "React",
-      "FastAPI",
-      "FFmpeg",
-      "Tailwindcss",
-      "Shadcn UI",
-      "Zod",
-      "tRPC",
+			"React",
+			"FastAPI",
+			"FFmpeg",
+			"Tailwindcss",
+			"Shadcn UI",
+			"Zod",
+			"tRPC",
 		],
 		description:
 			"Transcribe is an AI-powered transcription service that transcribes audio and video files into text. It supports seamless import and export of audio and video files, making it easy to work with structured data across platforms.",
@@ -62,11 +65,11 @@ export const projects = [
 		image: "/images/projects/cognova-ai.png",
 		acquired: true,
 		video: "",
-		href: "https://cognova.io?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://cognova.io"),
 		links: [
 			{
 				type: "Website",
-				href: "https://cognova.io?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://cognova.io"),
 				icon: Globe,
 			},
 		],
@@ -88,11 +91,11 @@ export const projects = [
 	{
 		name: "Clue",
 		image: "/images/projects/clue.svg",
-		href: "https://clue.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://clue.iranzi.dev"),
 		links: [
 			{
 				type: "Website",
-				href: "https://clue.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://clue.iranzi.dev"),
 				icon: Globe,
 			},
 		],
@@ -116,11 +119,11 @@ export const projects = [
 		image: "/images/projects/prostack.png",
 
 		video: "",
-		href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://prostack.cc"),
 		links: [
 			{
 				type: "Website",
-				href: "https://prostack.cc?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://prostack.cc"),
 				icon: Globe,
 			},
 		],
@@ -141,11 +144,11 @@ export const projects = [
 		name: "FlashDB (Redis)",
 		image: "https://www.svgrepo.com/show/303460/redis-logo.svg",
 		video: "",
-		href: "https://github.com/iranzithierry/redis-alternative",
+		href: encodeUrl("https://github.com/iranzithierry/redis-alternative"),
 		links: [
 			{
 				type: "Source",
-				href: "https://github.com/iranzithierry/redis-alternative",
+				href: encodeUrl("https://github.com/iranzithierry/redis-alternative"),
 				icon: GitHubLogoIcon,
 			},
 		],
@@ -159,11 +162,11 @@ export const projects = [
 		name: "Rewrite AI",
 		image: "/images/projects/rewrite-ai.png",
 		video: "",
-		href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://rewrite.iranzi.dev"),
 		links: [
 			{
 				type: "Website",
-				href: "https://rewrite.iranzi.dev?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://rewrite.iranzi.dev"),
 				icon: Globe,
 			},
 		],
@@ -185,11 +188,11 @@ export const projects = [
 		name: "Dashkombat",
 		image: "/images/projects/placeholder.png",
 		video: "",
-		href: "https://dashkombat.vercel.app/?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://dashkombat.vercel.app/"),
 		links: [
 			{
 				type: "Website",
-				href: "https://dashkombat.vercel.app/?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://dashkombat.vercel.app/"),
 				icon: Globe,
 			},
 		],
@@ -211,11 +214,11 @@ export const projects = [
 		name: "Movo+",
 		image: "/images/projects/movo+.svg",
 		video: "",
-		href: "https://movoplus.com/vendors",
+		href: encodeUrl("https://movoplus.com/vendors"),
 		links: [
 			{
 				type: "Website",
-				href: "https://movoplus.com",
+				href: encodeUrl("https://movoplus.com"),
 				icon: Globe,
 			},
 		],
@@ -236,11 +239,11 @@ export const projects = [
 		name: "Definitive+",
 		image: "/images/projects/definitive+.png",
 		video: "",
-		href: "https://definitiveplus.vercel.app/",
+		href: encodeUrl("https://definitiveplus.vercel.app/"),
 		links: [
 			{
 				type: "Website",
-				href: "https://definitiveplus.vercel.app/",
+				href: encodeUrl("https://definitiveplus.vercel.app/"),
 				icon: Globe,
 			},
 		],
@@ -262,11 +265,11 @@ export const projects = [
 		name: "Photogen",
 		image: "/images/projects/placeholder.png",
 		video: "",
-		href: "https://photogen.vercel.app/?ref=portfolio&from=https://iranzi.dev/projects",
+		href: encodeUrl("https://photogen.vercel.app/"),
 		links: [
 			{
 				type: "Website",
-				href: "https://photogen.vercel.app/?ref=portfolio&from=https://iranzi.dev/projects",
+				href: encodeUrl("https://photogen.vercel.app/"),
 				icon: Globe,
 			},
 		],
@@ -280,16 +283,16 @@ export const projects = [
 		name: "Jeezy",
 		image: "/images/projects/jeezy.svg",
 		video: "",
-		href: "https://jeezy.vercel.app",
+		href: encodeUrl("https://jeezy.vercel.app"),
 		links: [
 			{
 				type: "Website",
-				href: "https://jeezy.vercel.app",
+				href: encodeUrl("https://jeezy.vercel.app"),
 				icon: Globe,
 			},
 			{
 				type: "Source",
-				href: "https://github.com/iranzithierry/jeezy",
+				href: encodeUrl("https://github.com/iranzithierry/jeezy"),
 				icon: GitHubLogoIcon,
 			},
 		],
@@ -303,11 +306,11 @@ export const projects = [
 		name: "iBot",
 		image: "/images/projects/ibot.png",
 		video: "",
-		href: "https://github.com/Iranzithierry/ibot-mobile-app/",
+		href: encodeUrl("https://github.com/Iranzithierry/ibot-mobile-app"),
 		links: [
 			{
 				type: "Source",
-				href: "https://github.com/Iranzithierry/ibot-mobile-app/",
+				href: encodeUrl("https://github.com/Iranzithierry/ibot-mobile-app"),
 				icon: GitHubLogoIcon,
 			},
 		],
@@ -321,11 +324,11 @@ export const projects = [
 		name: "eSound",
 		image: "/images/projects/e-sound.png",
 		video: "",
-		href: "https://e-sound.onrender.com/",
+		href: encodeUrl("https://e-sound.onrender.com/"),
 		links: [
 			{
 				type: "Source",
-				href: "https://github.com/iranzithierry/e-sound",
+				href: encodeUrl("https://github.com/iranzithierry/e-sound"),
 				icon: GitHubLogoIcon,
 			},
 		],
