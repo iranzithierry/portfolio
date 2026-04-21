@@ -13,6 +13,13 @@ export default function EducationSection() {
 
     const educationData = [
         {
+            startYear: "Jan 2026",
+            endYear: "Mar 2026",
+            degree: "Bachelor of Business in Business Information Technology (Dropped Out)",
+            institution: "Mount Kigali University - MKU",
+            description: "Enrolled in the Bachelor of Business in Business Information Technology program before discontinuing. The program covered business management principles integrated with information technology concepts.",
+        },
+        {
             startYear: "Jan 2023",
             endYear: "July 2025",
             degree: "Advanced Level in Software Development",
