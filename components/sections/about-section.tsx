@@ -2,10 +2,6 @@ export default function AboutSection() {
 	const birthDate = new Date("2006-04-27");
 	const today = new Date();
 	let age = today.getFullYear() - birthDate.getFullYear();
-	const m = today.getMonth() - birthDate.getMonth();
-	if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-		age--;
-	}
 	return (
 		<div className="mt-8 max-w-xl">
 			<h2 className="text-lg font-bold mb-2 text-gray-800 dark:text-neutral-100">
